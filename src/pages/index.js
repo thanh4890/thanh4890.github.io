@@ -7,7 +7,7 @@ export default ({ data }) => {
   console.log(data);
   return (
     <div>
-      <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
+      <g.H1 display={"inline-block"}>
         My Amazing Things
       </g.H1>
       <h4>{data.allMarkdownRemark.totalCount} Posts</h4>

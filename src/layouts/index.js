@@ -4,8 +4,20 @@ import { css } from "glamor";
 import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
+import FaMail from 'react-icons/lib/fa/mail-forward'
 
-const linkStyle = css({ marginLeft: 10, float: `right` });
+const linkStyle = css({
+  color: '#f85e23',
+  marginLeft: 10,
+  float: `right`,
+  padding: '1px 3px',
+  borderRadius: 2,
+  textDecoration: 'none',
+  ':hover, :active, :focus': {
+    backgroundColor: '#303030',
+    color: 'white'
+  }
+});
 
 export default ({ children, data }) =>
   <g.Div
@@ -15,21 +27,46 @@ export default ({ children, data }) =>
     paddingTop={rhythm(1.5)}
   >
     <SideBar/>
-    <Link to={`/`}>
-      <g.H3
-        marginTop={0}
-        display={`inline-block`}
-        fontStyle={`normal`}
+    <g.Header
+      overflow='hidden'
+    >
+      <g.Div
+        width='50%'
+        float='left'
       >
-        {data.site.siteMetadata.title}
-      </g.H3>
-    </Link>
-    <Link className={linkStyle} to={`/about/`}>
-      About
-    </Link>
-    <Link className={linkStyle} to={`/my-files/`}>
-      My Files
-    </Link>
+        <Link to={`/`}
+          style={{
+            textDecoration: 'none'
+          }}
+        >
+          <g.H3
+            marginTop={0}
+            marginBottom={rhythm(1/4)}
+            display={`inline-block`}
+            fontStyle={`normal`}
+            color='#303030'
+            textTransform="uppercase"
+          >
+            {data.site.siteMetadata.title}
+          </g.H3>
+          <g.P color='#303030'>
+            Web Developer
+          </g.P>
+        </Link>
+      </g.Div>
+      <g.Div
+        overflow="hidden"
+      >
+        <a href="mailto:thanh4890@gmail.com" className={linkStyle}>
+          <FaMail style={{
+            display: 'inline-block',
+            marginRight: '5px'
+          }}/>
+          thanh4890@gmail.com
+        </a>
+      </g.Div>
+    </g.Header>
+    <hr/>
     {children()}
   </g.Div>
 

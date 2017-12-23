@@ -8,23 +8,53 @@ export default ({ data }) => {
   return (
     <div>
       <g.H1 display={"inline-block"}>
-        My Amazing Things
+        Experience
       </g.H1>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link
-            to={node.fields.slug}
-            css={{ textDecoration: `none`, color: `inherit` }}
-          >
-            <g.H3 marginBottom={rhythm(1 / 4)}>
-              {node.frontmatter.title}{" "}
-              <g.Span color="#BBB">— {node.frontmatter.date}</g.Span>
-            </g.H3>
-            <p>{node.excerpt}</p>
-          </Link>
+      <div>
+        <span>2015 Now - React Developer at Framgia</span>
+        <div className="description">
+          Build exciting website for pharmacy
         </div>
-      ))}
+        <div className="websites">
+          <p>WhytLink <a href="#">http://whytlink.com</a></p>
+          <p>WhytPlot <a href="#">http://whytplot.com</a></p>
+        </div>
+        <div className="skills">
+          <span>
+            html, css, JS, React
+          </span>
+          <span>
+            Redux
+          </span>
+        </div>
+      </div>
+      <hr/>
+      <div>
+        <span>2013 2015 - WordPress Developer at Kopatheme</span>
+        <div className="description">
+          Build exciting website for pharmacy
+        </div>
+        <div className="websites">
+          <p>Kopatheme <a href="#">http://kopatheme.com</a></p>
+        </div>
+        <div className="skills">
+          <span>
+            html,css, js, PHP
+          </span>
+          <span>
+            WordPress
+          </span>
+        </div>
+      </div>
+      <g.H1 display={"inline-block"}>
+        Technical Skill
+      </g.H1>
+      <div>
+        c/c++, js, php
+        html, css, js, php, mysql
+        react, redux
+        git, svn, sublime text, vim
+      </div>
     </div>
   );
 };

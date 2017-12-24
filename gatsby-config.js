@@ -23,7 +23,7 @@ module.exports = {
       },
       {
         name: 'Web',
-        skills: ['JavaScript', 'HTML5', 'CSS3', 'React', 'Redux', 'PHP', 'MySQL'],
+        skills: ['JavaScript', 'HTML5', 'CSS3', 'React', 'Redux', 'PHP', 'MySQL', 'WordPress'],
       },
       {
         name: 'Others',

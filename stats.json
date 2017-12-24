@@ -1,56 +1,28 @@
 {
   "assetsByChunkName": {
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-de54b1ad587b09e189b5.js",
-      "component---src-pages-index-js-de54b1ad587b09e189b5.js.map"
+      "component---src-pages-index-js-04269f188b98f38b79f1.js",
+      "component---src-pages-index-js-04269f188b98f38b79f1.js.map"
     ],
     "path---": [
-      "path----4b449fc54bbe52d684a7.js",
-      "path----4b449fc54bbe52d684a7.js.map"
-    ],
-    "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-b84dc952d929669935d8.js",
-      "component---src-templates-blog-post-js-b84dc952d929669935d8.js.map"
+      "path----c563d7864e6db801db65.js",
+      "path----c563d7864e6db801db65.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-b0bedbc0bcc6c3dd3ced.js",
-      "component---src-layouts-index-js-b0bedbc0bcc6c3dd3ced.js.map"
+      "component---src-layouts-index-js-09c6eea30b336f73b6a2.js",
+      "component---src-layouts-index-js-09c6eea30b336f73b6a2.js.map"
     ],
     "path---index": [
-      "path---index-947a6088235e6e2c1e27.js",
-      "path---index-947a6088235e6e2c1e27.js.map"
-    ],
-    "component---src-pages-my-files-js": [
-      "component---src-pages-my-files-js-b0a36c1c44972c0b05f8.js",
-      "component---src-pages-my-files-js-b0a36c1c44972c0b05f8.js.map"
-    ],
-    "path---my-files": [
-      "path---my-files-7a56a2ec5452bfb2f062.js",
-      "path---my-files-7a56a2ec5452bfb2f062.js.map"
+      "path---index-2805d0d0e45ddc1c8f5a.js",
+      "path---index-2805d0d0e45ddc1c8f5a.js.map"
     ],
     "commons": [
-      "commons-55de70dc66b2e13707a1.js",
-      "commons-55de70dc66b2e13707a1.js.map"
-    ],
-    "path---pandas-and-bananas": [
-      "path---pandas-and-bananas-cff7fdcd39db141acea7.js",
-      "path---pandas-and-bananas-cff7fdcd39db141acea7.js.map"
-    ],
-    "path---sweet-pandas-eating-sweets": [
-      "path---sweet-pandas-eating-sweets-347669a4ea55aab0b8cd.js",
-      "path---sweet-pandas-eating-sweets-347669a4ea55aab0b8cd.js.map"
+      "commons-d41d8cd98f00b204e980.js",
+      "commons-d41d8cd98f00b204e980.js.map"
     ],
     "app": [
-      "app-419386c75de7e3109384.js",
-      "app-419386c75de7e3109384.js.map"
-    ],
-    "component---src-pages-about-js": [
-      "component---src-pages-about-js-0dc92b04e4c07c951f78.js",
-      "component---src-pages-about-js-0dc92b04e4c07c951f78.js.map"
-    ],
-    "path---about": [
-      "path---about-d5848c94956494569cb0.js",
-      "path---about-d5848c94956494569cb0.js.map"
+      "app-982d93c96bb399af9099.js",
+      "app-982d93c96bb399af9099.js.map"
     ]
   }
 }

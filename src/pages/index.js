@@ -49,7 +49,7 @@ export default ({ data }) => {
       <g.H1 id="experience">
         Experience
       </g.H1>
-      {data.allMarkdownRemark.edges.map(({node}, index) => (
+      {data.exp.edges.map(({node}, index) => (
         <div key={index}>
           <h2>
             <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
@@ -91,6 +91,16 @@ export default ({ data }) => {
       <g.H1 id="education">
         Education
       </g.H1>
+      {data.edu.edges.map(({node}, index) => (
+        <div key={index}>
+          <h3 css={{
+            marginBottom: rhythm(1/2)
+          }}>
+            <Year><Start>{node.frontmatter.year}</Start></Year> {node.frontmatter.title}
+          </h3>
+          <div dangerouslySetInnerHTML={{ __html: node.html }} />
+        </div>
+      ))}
       {data.site.siteMetadata.education.map((group, index) =>
         <div key={index}>
           <g.H3 css={{
@@ -121,17 +131,34 @@ export const query = graphql`
         }
       }
     }
-    allMarkdownRemark {
+    exp: allMarkdownRemark(filter: {
+      fileAbsolutePath: {
+        regex: "/src\/md\/exp/"
+      }}) {
       edges {
         node {
           html
           frontmatter {
-              title
-              date(formatString: "DD MMMM, YYYY")
-              start
-              end
-              skills
-            }
+            title
+            date(formatString: "DD MMMM, YYYY")
+            start
+            end
+            skills
+          }
+        }
+      }
+    }
+    edu: allMarkdownRemark(filter: {
+      fileAbsolutePath: {
+        regex: "/src\/md\/edu/"
+      }}) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            year
+          }
         }
       }
     }

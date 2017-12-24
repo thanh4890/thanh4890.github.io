@@ -74,10 +74,10 @@ export default ({ socials }) =>
       textAlign='center'
       marginBottom={rhythm(2)}
     >
-      {socials.map(social => {
+      {socials.map((social, index) => {
         let Icon = FontAwesome[social.icon]
         return (
-          <SocialItem href={social.href}>
+          <SocialItem key={index} href={social.href}>
             <Icon css={{ color: 'white' }}/>
           </SocialItem>
         )

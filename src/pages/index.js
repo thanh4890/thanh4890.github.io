@@ -49,8 +49,8 @@ export default ({ data }) => {
       <g.H1 id="experience">
         Experience
       </g.H1>
-      {data.allMarkdownRemark.edges.map(({node}) => (
-        <div>
+      {data.allMarkdownRemark.edges.map(({node}, index) => (
+        <div key={index}>
           <h2>
             <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
           </h2>
@@ -58,8 +58,8 @@ export default ({ data }) => {
           <div dangerouslySetInnerHTML={{ __html: node.html }} />
 
           <Skills>
-            {node.frontmatter.skills.split(',').map(skill =>
-              <Skill>{skill}</Skill>
+            {node.frontmatter.skills.split(',').map((skill, index) =>
+              <Skill key={index}>{skill}</Skill>
             )}
           </Skills>
 
@@ -71,16 +71,16 @@ export default ({ data }) => {
       <g.H1 id="technical-skills">
         Skills
       </g.H1>
-      {data.site.siteMetadata.skills.map(group =>
-        <div>
+      {data.site.siteMetadata.skills.map((group, index) =>
+        <div key={index}>
           <g.H3 css={{
             marginBottom: rhythm(1/2)
           }}>{group.name}</g.H3>
           <g.Div css={{
             marginBottom: rhythm(1)
           }}>
-            {group.skills.map(skill =>
-              <Skill>{skill}</Skill>
+            {group.skills.map((skill, index) =>
+              <Skill key={index}>{skill}</Skill>
             )}
           </g.Div>
         </div>
@@ -91,14 +91,14 @@ export default ({ data }) => {
       <g.H1 id="education">
         Education
       </g.H1>
-      {data.site.siteMetadata.education.map(group =>
-        <div>
+      {data.site.siteMetadata.education.map((group, index) =>
+        <div key={index}>
           <g.H3 css={{
             marginBottom: rhythm(1/2)
           }}>{group.name}</g.H3>
           <ul>
-            {group.items.map(skill =>
-              <li>{skill}</li>
+            {group.items.map((skill, index) =>
+              <li key={index}>{skill}</li>
             )}
           </ul>
         </div>

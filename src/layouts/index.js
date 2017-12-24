@@ -6,9 +6,24 @@ import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
 import FaMail from 'react-icons/lib/fa/mail-forward'
 
+const mediaQueries = {
+  phone: '@media only screen and (max-width: 500px)',
+}
+
+const SiteTitle = g.div({
+  width: '50%',
+  float: 'left',
+  [mediaQueries.phone]: {
+    width: 'auto',
+    float: 'none'
+  }
+})
+
 const Email = g.a({
+  display: 'inline-block',
   color: '#f85e23',
   marginLeft: 10,
+  marginBottom: rhythm(1),
   float: `right`,
   padding: '1px 3px',
   borderRadius: 2,
@@ -16,6 +31,11 @@ const Email = g.a({
   ':hover, :active, :focus': {
     backgroundColor: '#303030',
     color: 'white'
+  },
+  [mediaQueries.phone]: {
+    float: 'none',
+    marginLeft: 0,
+    marginBottom: rhythm(1)
   }
 });
 
@@ -30,10 +50,7 @@ export default ({ children, data }) =>
     <g.Header
       overflow='hidden'
     >
-      <g.Div
-        width='50%'
-        float='left'
-      >
+      <SiteTitle>
         <Link to={`/`}
           css={{
             textDecoration: 'none'
@@ -53,7 +70,7 @@ export default ({ children, data }) =>
             Web Developer
           </g.P>
         </Link>
-      </g.Div>
+      </SiteTitle>
       <g.Div
         overflow="hidden"
       >

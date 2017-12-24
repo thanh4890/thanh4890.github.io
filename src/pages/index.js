@@ -73,9 +73,11 @@ export default ({ data }) => {
       </g.H1>
       {data.site.siteMetadata.skills.map(group =>
         <div>
-          <h3>{group.name}</h3>
+          <g.H3 css={{
+            marginBottom: rhythm(1/2)
+          }}>{group.name}</g.H3>
           <g.Div css={{
-            marginBottom: rhythm(1.5)
+            marginBottom: rhythm(1)
           }}>
             {group.skills.map(skill =>
               <Skill>{skill}</Skill>
@@ -91,7 +93,9 @@ export default ({ data }) => {
       </g.H1>
       {data.site.siteMetadata.education.map(group =>
         <div>
-          <h3>{group.name}</h3>
+          <g.H3 css={{
+            marginBottom: rhythm(1/2)
+          }}>{group.name}</g.H3>
           <ul>
             {group.items.map(skill =>
               <li>{skill}</li>

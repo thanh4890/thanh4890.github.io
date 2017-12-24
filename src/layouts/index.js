@@ -6,7 +6,7 @@ import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
 import FaMail from 'react-icons/lib/fa/mail-forward'
 
-const linkStyle = css({
+const Email = g.a({
   color: '#f85e23',
   marginLeft: 10,
   float: `right`,
@@ -26,7 +26,7 @@ export default ({ children, data }) =>
     padding={rhythm(2)}
     paddingTop={rhythm(1.5)}
   >
-    <SideBar/>
+    <SideBar socials={data.site.siteMetadata.socials}/>
     <g.Header
       overflow='hidden'
     >
@@ -35,7 +35,7 @@ export default ({ children, data }) =>
         float='left'
       >
         <Link to={`/`}
-          style={{
+          css={{
             textDecoration: 'none'
           }}
         >
@@ -57,13 +57,13 @@ export default ({ children, data }) =>
       <g.Div
         overflow="hidden"
       >
-        <a href="mailto:thanh4890@gmail.com" className={linkStyle}>
-          <FaMail style={{
+        <Email href="mailto:thanh4890@gmail.com">
+          <FaMail css={{
             display: 'inline-block',
             marginRight: '5px'
           }}/>
           thanh4890@gmail.com
-        </a>
+        </Email>
       </g.Div>
     </g.Header>
     <hr/>
@@ -75,6 +75,10 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        socials {
+          href
+          icon
+        }
       }
     }
   }

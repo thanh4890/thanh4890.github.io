@@ -2,6 +2,34 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     title: `Thanh Nguyen Dac`,
+    socials: [
+      {
+        icon: 'FaShareAlt',
+        href: '#'
+      },
+      {
+        icon: 'FaFacebook',
+        href: 'https://facebook.com/thanh4890'
+      },
+      {
+        icon: 'FaTwitter',
+        href: 'https://twitter.com/thanh4890'
+      }
+    ],
+    skills: [
+      {
+        name: 'Languages',
+        skills: ['JavaScript', 'PHP'],
+      },
+      {
+        name: 'Web',
+        skills: ['JavaScript', 'HTML5', 'CSS3', 'React', 'Redux', 'PHP', 'MySQL'],
+      },
+      {
+        name: 'Others',
+        skills: ['GIT', 'SVN', 'Sublime Text', 'Vim'],
+      }
+    ]
   },
   plugins: [
     {

@@ -4,18 +4,38 @@ import { css } from "glamor";
 import { rhythm } from "../utils/typography";
 import Link from "gatsby-link"
 import avatar from './avatar.jpg'
-import { FaFacebook, FaTwitter, FaShareAlt } from 'react-icons/lib/fa'
+import * as FontAwesome from 'react-icons/lib/fa'
 
-const ListItem = css({
+const mediaQueries = {
+  desktop: '@media only screen and (max-width: 1300px)',
+}
+
+const Sidebar = g.div({
+  backgroundColor: "#303030",
+  width: "200",
+  position: "fixed",
+  top: "0",
+  bottom: "0",
+  left: "0",
+  [mediaQueries.desktop]: {
+    display: 'none'
+  }
+})
+
+const List = g.ul({
+  listStyle: "none"
+})
+
+const ListItem = g.li({
   margin: 0,
   padding: 0
 })
 
-const SocialItem = css({
+const SocialItem = g.a({
   padding: 5
 })
 
-const SidebarLink = css({
+const SidebarLink = g.a({
   display: 'block',
   paddingLeft: 40,
   textTransform: 'uppercase',
@@ -29,51 +49,49 @@ const SidebarLink = css({
   }
 })
 
-export default () =>
-  <g.Div
-    backgroundColor="#303030"
-    width="200"
-    position="fixed"
-    top="0"
-    bottom="0"
-    left="0"
-  >
+const AvatarFigure = g.figure({
+  textAlign: "center", marginTop: rhythm(1), marginBottom: '0'
+})
+
+const Avatar = g.img({
+  borderRadius: "50%", maxWidth: "150px", marginBottom: 0
+})
+
+const PokeItem =  g(ListItem)({marginTop: rhythm(2)})
+const PokeLink =  g(SidebarLink)({color: '#f85e23'})
+
+export default ({ socials }) =>
+  <Sidebar>
     <Link to="/">
-      <figure style={{ textAlign: "center", marginTop: rhythm(1), marginBottom: '0' }}>
-          <img
-            src={avatar} 
-            alt={`Thanh Nguyen Dac`}
-            style={{ borderRadius: "50%", maxWidth: "150px", marginBottom: 0 }}
-          />
-      </figure>
+      <AvatarFigure>
+        <Avatar
+          src={avatar} 
+          alt={`Thanh Nguyen Dac`}
+        />
+      </AvatarFigure>
     </Link>
     <g.Div
       textAlign='center'
       marginBottom={rhythm(2)}
     >
-      <a className={SocialItem} href="#">
-        <FaShareAlt style={{
-          color: 'white'
-        }}/>
-      </a>
-      <a className={SocialItem} href="#">
-        <FaFacebook style={{
-          color: 'white'
-        }}/>
-      </a>
-      <a className={SocialItem} href="#">
-        <FaTwitter style={{
-          color: 'white'
-        }}/>
-      </a>
+      {socials.map(social => {
+        let Icon = FontAwesome[social.icon]
+        return (
+          <SocialItem href={social.href}>
+            <Icon css={{ color: 'white' }}/>
+          </SocialItem>
+        )
+      })}
     </g.Div>
-    <ul style={{ listStyle: "none" }}>
-      <li className={ListItem}>
-        <a className={SidebarLink} href="#experience">Experience</a>
-      </li>
-      <li className={ListItem}>
-        <a className={SidebarLink} href="#technical-skill">Technical skill</a>
-      </li>
-    </ul>
-    
-  </g.Div>
+    <List>
+      <ListItem>
+        <SidebarLink href="#experience">Experience</SidebarLink>
+      </ListItem>
+      <ListItem>
+        <SidebarLink href="#technical-skills">Technical skills</SidebarLink>
+      </ListItem>
+      <PokeItem>
+        <PokeLink href="mailto:thanh4890@gmail.com">Poke Me</PokeLink>
+      </PokeItem>
+    </List>
+  </Sidebar>

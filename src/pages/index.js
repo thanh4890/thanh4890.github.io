@@ -73,16 +73,30 @@ export default ({ data }) => {
       </g.H1>
       {data.site.siteMetadata.skills.map(group =>
         <div>
-          <g.H3 css={{
-            marginBottom: rhythm(1/2)
-          }}>{group.name}</g.H3>
+          <h3>{group.name}</h3>
           <g.Div css={{
-            marginBottom: rhythm(1)
+            marginBottom: rhythm(1.5)
           }}>
             {group.skills.map(skill =>
               <Skill>{skill}</Skill>
             )}
           </g.Div>
+        </div>
+      )}
+
+      <Separator/>
+
+      <g.H1 id="education">
+        Education
+      </g.H1>
+      {data.site.siteMetadata.education.map(group =>
+        <div>
+          <h3>{group.name}</h3>
+          <ul>
+            {group.items.map(skill =>
+              <li>{skill}</li>
+            )}
+          </ul>
         </div>
       )}
     </div>
@@ -96,6 +110,10 @@ export const query = graphql`
         skills {
           name
           skills
+        }
+        education {
+          name
+          items
         }
       }
     }

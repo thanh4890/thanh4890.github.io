@@ -29,6 +29,12 @@ module.exports = {
         name: 'Others',
         skills: ['GIT', 'SVN', 'Sublime Text', 'Vim'],
       }
+    ],
+    education: [
+      {
+        name: 'Languages',
+        items: ['Vietnamese', 'English']
+      }
     ]
   },
   plugins: [

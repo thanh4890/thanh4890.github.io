@@ -4,8 +4,8 @@ module.exports = {
     title: `Thanh Nguyen Dac`,
     socials: [
       {
-        icon: 'FaShareAlt',
-        href: '#'
+        icon: 'FaGithub',
+        href: 'https://github.com/thanh4890'
       },
       {
         icon: 'FaFacebook',

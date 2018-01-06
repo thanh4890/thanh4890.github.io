@@ -84,7 +84,7 @@ export default ({ data }) => {
               let levels = []
               let stars = Math.floor(skill.level)
               let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
-              let starOs = 3 - stars - starHalfs
+              let starOs = 5 - stars - starHalfs
               for (let i = 0; i < stars; i++) {
                 levels.push(<FontAwesome.FaStar/>)
               }

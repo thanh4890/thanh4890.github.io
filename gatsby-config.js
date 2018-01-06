@@ -22,10 +22,10 @@ module.exports = {
         skills: [
           {
             name: 'JavaScript',
-            level: 3
+            level: 5
           }, {
             name: 'PHP',
-            level: 3
+            level: 5
           }
         ],
       },
@@ -34,33 +34,33 @@ module.exports = {
         skills: [
           {
             name: 'JavaScript',
-            level: 3
+            level: 5
           },
           {
             name: 'HTML5',
-            level: 2.5,
+            level: 4,
           },
           { 
             name:'CSS3',
-            level: 2
+            level: 3.5
           },
           {
             name: 'React',
-            level: 3
+            level: 5
           },{
             name: 'Redux',
-            level: 2
+            level: 4
           },
           {
             name: 'PHP',
-            level: 3
+            level: 5
           }, {
             name: 'MySQL',
-            level: 1,
+            level: 2,
           },
           {
             name: 'WordPress',
-            level: 3
+            level: 5
           }
         ],
       },
@@ -69,19 +69,19 @@ module.exports = {
         skills: [
           {
             name: 'GIT',
-            level: 3
+            level: 5
           },
           {
             name: 'SVN',
-            level: 1.5
+            level: 2.5
           },
           {
             name: 'Sublime Text',
-            level: 3,
+            level: 5,
           },
           {
             name: 'Vim',
-            level: 2
+            level: 3.5
           }
         ],
       }

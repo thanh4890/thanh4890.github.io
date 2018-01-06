@@ -25,7 +25,7 @@ module.exports = {
             level: 5
           }, {
             name: 'PHP',
-            level: 5
+            level: 4
           }
         ],
       },
@@ -53,7 +53,7 @@ module.exports = {
           },
           {
             name: 'PHP',
-            level: 5
+            level: 4
           }, {
             name: 'MySQL',
             level: 2,

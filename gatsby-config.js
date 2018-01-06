@@ -19,15 +19,71 @@ module.exports = {
     skills: [
       {
         name: 'Languages',
-        skills: ['JavaScript', 'PHP'],
+        skills: [
+          {
+            name: 'JavaScript',
+            level: 3
+          }, {
+            name: 'PHP',
+            level: 3
+          }
+        ],
       },
       {
         name: 'Web',
-        skills: ['JavaScript', 'HTML5', 'CSS3', 'React', 'Redux', 'PHP', 'MySQL', 'WordPress'],
+        skills: [
+          {
+            name: 'JavaScript',
+            level: 3
+          },
+          {
+            name: 'HTML5',
+            level: 2.5,
+          },
+          { 
+            name:'CSS3',
+            level: 2
+          },
+          {
+            name: 'React',
+            level: 3
+          },{
+            name: 'Redux',
+            level: 2
+          },
+          {
+            name: 'PHP',
+            level: 3
+          }, {
+            name: 'MySQL',
+            level: 1,
+          },
+          {
+            name: 'WordPress',
+            level: 3
+          }
+        ],
       },
       {
         name: 'Others',
-        skills: ['GIT', 'SVN', 'Sublime Text', 'Vim'],
+        skills: [
+          {
+            name: 'GIT',
+            level: 3
+          },
+          {
+            name: 'SVN',
+            level: 1.5
+          },
+          {
+            name: 'Sublime Text',
+            level: 3,
+          },
+          {
+            name: 'Vim',
+            level: 2
+          }
+        ],
       }
     ],
     education: [

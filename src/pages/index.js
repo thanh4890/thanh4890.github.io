@@ -2,6 +2,7 @@ import React from "react";
 import g from "glamorous";
 import Link from "gatsby-link"
 import { rhythm } from "../utils/typography";
+import * as FontAwesome from 'react-icons/lib/fa'
 
 const Separator = g.hr({
   marginTop: rhythm(1),
@@ -79,9 +80,28 @@ export default ({ data }) => {
           <g.Div css={{
             marginBottom: rhythm(1)
           }}>
-            {group.skills.map((skill, index) =>
-              <Skill key={index}>{skill}</Skill>
-            )}
+            {group.skills.map((skill, index) => {
+              let levels = []
+              let stars = Math.floor(skill.level)
+              let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
+              let starOs = 3 - stars - starHalfs
+              for (let i = 0; i < stars; i++) {
+                levels.push(<FontAwesome.FaStar/>)
+              }
+              if (starHalfs) {
+                levels.push(<FontAwesome.FaStarHalfEmpty/>)
+              }
+              for (let i = 0; i < starOs; i++) {
+                levels.push(<FontAwesome.FaStarO/>)
+              }
+              return (
+                <div>
+                  <Skill key={index}>
+                    <span css={{marginRight: 10}}>{levels}</span>{skill.name}
+                  </Skill>
+                </div>
+              )
+            })}
           </g.Div>
         </div>
       )}
@@ -123,7 +143,10 @@ export const query = graphql`
       siteMetadata {
         skills {
           name
-          skills
+          skills {
+            name
+            level
+          }
         }
         education {
           name

@@ -56,7 +56,7 @@ module.exports = {
             level: 4
           }, {
             name: 'MySQL',
-            level: 2,
+            level: 3,
           },
           {
             name: 'WordPress',

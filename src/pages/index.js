@@ -1,8 +1,9 @@
-import React from "react";
-import g from "glamorous";
+import React from "react"
+import g from "glamorous"
 import Link from "gatsby-link"
-import { rhythm } from "../utils/typography";
+import { rhythm } from "../utils/typography"
 import * as FontAwesome from 'react-icons/lib/fa'
+import Portfolio from '../components/Portfolio'
 
 const Separator = g.hr({
   marginTop: rhythm(1),
@@ -69,6 +70,56 @@ export default ({ data }) => {
         )
       )}
 
+      <g.H1 id="spare-time">Spare Time</g.H1>
+
+      <div>
+        <h2>
+          <Year><Start>spare time</Start></Year> Personal projects
+        </h2>
+
+        <g.H3 css={{
+          marginBottom: rhythm(1/2)
+        }}>Punicatheme</g.H3>
+
+        <p>Punicatheme is an author on some online marketplaces (<a href="https://themeforest.net/user/punicavn/portfolio">Themeforest</a>, <a href="https://creativemarket.com/punicatheme/shop">Creative Market</a> and <a href="http://www.mojo-themes.com/user/punicatheme/">Mojo Themes</a>) that provides high quality WordPress themes and website templates.</p>
+
+        <ul>
+          <li>Punicatheme website: <a href="http://punicatheme.com">http://punicatheme.com</a></li>
+          <li>Punicatheme portfolio:
+            <ul>
+              <li><a href="https://themeforest.net/user/punicavn/portfolio">https://themeforest.net/user/punicavn/portfolio</a></li>
+              <li><a href="https://creativemarket.com/punicatheme/shop">https://creativemarket.com/punicatheme/shop</a></li>
+              <li><a href="http://www.mojo-themes.com/user/punicatheme/">http://www.mojo-themes.com/user/punicatheme/</a></li>
+            </ul>
+          </li>
+          <li>Punicatheme documentation: <a href="https://punicatheme.github.io/docs/">https://punicatheme.github.io/docs/</a></li>
+        </ul>
+
+        <Separator/>
+      </div>
+
+
+      <g.H1 id="portfolio">Portfolio</g.H1>
+
+      <div className="row">
+        {data.site.siteMetadata.portfolio.map((portfolio, key) =>
+          <div key={key} className="col-md-4 col-sm-6" css={{
+            marginBottom: rhythm(1)
+          }}>
+            <Portfolio {...portfolio}/>
+          </div>
+        )}
+      </div>
+
+      <div css={{
+        padding: rhythm(.5),
+        backgroundColor: '#303030',
+        color: 'white',
+        textAlign: 'center'
+      }}>And great products on the future...</div>
+
+      <Separator/>
+
       <g.H1 id="technical-skills">
         Skills
       </g.H1>
@@ -86,17 +137,17 @@ export default ({ data }) => {
               let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
               let starOs = 5 - stars - starHalfs
               for (let i = 0; i < stars; i++) {
-                levels.push(<FontAwesome.FaStar/>)
+                levels.push(<FontAwesome.FaStar key={levels.length}/>)
               }
               if (starHalfs) {
-                levels.push(<FontAwesome.FaStarHalfEmpty/>)
+                levels.push(<FontAwesome.FaStarHalfEmpty key={levels.length}/>)
               }
               for (let i = 0; i < starOs; i++) {
-                levels.push(<FontAwesome.FaStarO/>)
+                levels.push(<FontAwesome.FaStarO key={levels.length}/>)
               }
               return (
-                <div>
-                  <Skill key={index}>
+                <div key={index}>
+                  <Skill>
                     <span css={{marginRight: 10}}>{levels}</span>{skill.name}
                   </Skill>
                 </div>
@@ -148,13 +199,18 @@ export const query = graphql`
             level
           }
         }
+        portfolio {
+          name
+          feature
+          images
+        }
         education {
           name
           items
         }
       }
     }
-    exp: allMarkdownRemark(filter: {
+    exp: allMarkdownRemark(sort: {fields: [frontmatter___start], order: DESC}, filter: {
       fileAbsolutePath: {
         regex: "/src\/md\/exp/"
       }}) {

@@ -88,6 +88,12 @@ export default ({ socials }) =>
         <SidebarLink href="#experience">Experience</SidebarLink>
       </ListItem>
       <ListItem>
+        <SidebarLink href="#spare-time">Spare time</SidebarLink>
+      </ListItem>
+      <ListItem>
+        <SidebarLink href="#portfolio">Portfolio</SidebarLink>
+      </ListItem>
+      <ListItem>
         <SidebarLink href="#technical-skills">Technical skills</SidebarLink>
       </ListItem>
       <PokeItem>

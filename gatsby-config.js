@@ -16,6 +16,58 @@ module.exports = {
         href: 'https://twitter.com/thanh4890'
       }
     ],
+    portfolio: [
+      {
+        name: 'WhytLink',
+        feature: '/whytlink-1.png',
+        images: [
+          '/whytlink-1.png',
+          '/whytlink-2.png',
+          '/whytlink-3.png',
+          '/whytlink-4.png',
+          '/whytlink-5.jpg',
+        ]
+      },
+      {
+        name: 'WhytPlot',
+        feature: '/whytplot-1.jpg',
+        images: [
+          '/whytplot-1.jpg',
+          '/whytplot-2.jpg',
+          '/whytplot-3.jpg',
+        ]
+      },
+      {
+        name: 'Unicmag',
+        feature: '/unicmag-1.png',
+        images: [
+          '/unicmag-1.png',
+          '/unicmag-2.png',
+          '/unicmag-3.png',
+        ]
+      },
+      {
+        name: 'Alana',
+        feature: '/alana.png',
+        images: [
+          '/alana.png',
+        ]
+      },
+      {
+        name: 'Avex',
+        feature: '/avex-1.png',
+        images: [
+          '/avex-1.png',
+        ]
+      },
+      {
+        name: 'Lookmag',
+        feature: '/lookmag.png',
+        images: [
+          '/lookmag.png',
+        ]
+      }
+    ],
     skills: [
       {
         name: 'Languages',
@@ -126,6 +178,7 @@ module.exports = {
           windows: false
         }
       }
-    }
+    },
+    'gatsby-plugin-sass',
   ],
 };

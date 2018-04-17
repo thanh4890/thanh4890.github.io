@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
 import FaMail from 'react-icons/lib/fa/mail-forward'
+import './bootstrap.scss'
 
 const mediaQueries = {
   phone: '@media only screen and (max-width: 500px)',

@@ -9,15 +9,17 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
   },
   "dependencies": {
-    "gatsby": "^1.9.248",
+    "gatsby": "^1.9.251",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-glamor": "^1.6.10",
+    "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.25",
     "gatsby-plugin-typography": "^1.7.10",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.25",
     "glamorous": "^4.11.0",
+    "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-image-lightbox": "^4.6.0",
     "react-modal": "^3.3.2",

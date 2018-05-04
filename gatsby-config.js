@@ -18,6 +18,19 @@ module.exports = {
     ],
     portfolio: [
       {
+        name: 'Findme',
+        feature: '/findme-0.png',
+        images: [
+          '/findme-1.png',
+          '/findme-2.png',
+          '/findme-3.png',
+          '/findme-4.png',
+          '/findme-5.png',
+          '/findme-6.png',
+          '/findme-7.png',
+        ]
+      },
+      {
         name: 'WhytLink',
         feature: '/whytlink-1.png',
         images: [

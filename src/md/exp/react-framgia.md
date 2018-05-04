@@ -26,4 +26,4 @@ WhytPlot is a web service that covers analytical items for regional medical visi
 Findme is a service allows patient to connect to right doctors with a right price to find out more infomation about their disease for getting better treatment.
 <br/>This service works integrately with WhytLink to provide patient info and great tools to doctor. So they can diagnose, give advice and treatment exactly to their patient with current disease status.
 
-* Findme website: [https://www.findme.life/](https://www.findme.life/)
+* Findme website: [https://www.findme.life](https://www.findme.life)

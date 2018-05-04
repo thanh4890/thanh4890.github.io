@@ -79,6 +79,20 @@ module.exports = {
         images: [
           '/lookmag.png',
         ]
+      },
+      {
+        name: 'Nictitate',
+        feature: '/nictitate.png',
+        images: [
+          '/nictitate.png',
+        ]
+      },
+      {
+        name: 'My CV',
+        feature: '/thanh-cv.png',
+        images: [
+          '/thanh-cv.png',
+        ]
       }
     ],
     skills: [

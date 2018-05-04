@@ -31,7 +31,7 @@ const Html = ({ headComponents, body, postBodyComponents }) => {
         <meta name="description" content="Thanh Nguyen Dac's site" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Thanh Nguyen Dac</title>
+        <title>CV - Thanh Nguyen Dac</title>
         {headComponents}
         {css}
       </head>

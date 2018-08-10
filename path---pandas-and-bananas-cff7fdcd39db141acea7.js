@@ -1,2 +1,0 @@
-webpackJsonp([0xb0f3e884bdf1],{516:function(a,n){a.exports={data:{markdownRemark:{html:"<p>Do Pandas eat bananas? Check out this short video that shows that yes! pandas do\nseem to really enjoy bananas!</p>",frontmatter:{title:"Pandas and Bananas"}}},pathContext:{slug:"/pandas-and-bananas/"}}}});
-//# sourceMappingURL=path---pandas-and-bananas-cff7fdcd39db141acea7.js.map

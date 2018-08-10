@@ -8,10 +8,6 @@ module.exports = {
         href: 'https://github.com/thanh4890'
       },
       {
-        icon: 'FaFacebook',
-        href: 'https://facebook.com/thanh4890'
-      },
-      {
         icon: 'FaTwitter',
         href: 'https://twitter.com/thanh4890'
       }

@@ -5,6 +5,7 @@ import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
 import FaMail from 'react-icons/lib/fa/mail-forward'
+import FaPdf from 'react-icons/lib/fa/file-pdf-o'
 import './bootstrap.scss'
 
 const mediaQueries = {
@@ -25,7 +26,6 @@ const Email = g.a({
   color: '#f85e23',
   marginLeft: 10,
   marginBottom: rhythm(1),
-  float: `right`,
   padding: '1px 3px',
   borderRadius: 2,
   textDecoration: 'none',
@@ -74,6 +74,7 @@ export default ({ children, data }) =>
       </SiteTitle>
       <g.Div
         overflow="hidden"
+        textAlign="right"
       >
         <Email href="mailto:thanh4890@gmail.com">
           <FaMail css={{
@@ -81,6 +82,13 @@ export default ({ children, data }) =>
             marginRight: '5px'
           }}/>
           thanh4890@gmail.com
+        </Email> |
+        <Email>
+          <FaPdf css={{
+            display: 'inline-block',
+            marginRight: '5px'
+          }}/>
+          PDF Version
         </Email>
       </g.Div>
     </g.Header>

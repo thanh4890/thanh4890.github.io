@@ -5,19 +5,47 @@ import Link from "gatsby-link";
 import { rhythm } from "../utils/typography";
 import SideBar from './sidebar'
 import FaMail from 'react-icons/lib/fa/mail-forward'
+import FaPdf from 'react-icons/lib/fa/file-pdf-o'
 import './bootstrap.scss'
 
 const mediaQueries = {
-  phone: '@media only screen and (max-width: 500px)',
+  phone: '@media only screen and (max-width: 660px)',
 }
 
 const SiteTitle = g.div({
   width: '50%',
   float: 'left',
+  ':hover .site-name': {
+    color: '#f85e23'
+  },
+  ':hover .site-desc': {
+    color: '#f85e23'
+  },
   [mediaQueries.phone]: {
     width: 'auto',
     float: 'none'
   }
+})
+
+const SiteMeta = g.div({
+  overflow: 'hidden',
+  textAlign: 'right',
+  [mediaQueries.phone]: {
+    textAlign: 'left'
+  }
+})
+
+const SiteName = g.h3('site-name', {
+  marginTop: 0,
+  marginBottom: rhythm(1/4),
+  display: `inline-block`,
+  fontStyle: `normal`,
+  color: '#303030',
+  textTransform: "uppercase"
+})
+
+const SiteDesc = g.p('site-desc', {
+  color: '#303030'
 })
 
 const Email = g.a({
@@ -25,13 +53,18 @@ const Email = g.a({
   color: '#f85e23',
   marginLeft: 10,
   marginBottom: rhythm(1),
-  float: `right`,
   padding: '1px 3px',
   borderRadius: 2,
   textDecoration: 'none',
   ':hover, :active, :focus': {
     backgroundColor: '#303030',
-    color: 'white'
+    color: 'white',
+    '&:visited': {
+      color: 'white'
+    }
+  },
+  ':visited': {
+    color: '#f85e23'
   },
   [mediaQueries.phone]: {
     float: 'none',
@@ -40,11 +73,15 @@ const Email = g.a({
   }
 });
 
+const Pdf = g(Email)({
+  marginLeft: 0
+})
+
 export default ({ children, data }) =>
   <g.Div
     margin={`0 auto`}
-    maxWidth={700}
-    padding={rhythm(2)}
+    maxWidth={740}
+    padding={20}
     paddingTop={rhythm(1.5)}
   >
     <SideBar socials={data.site.siteMetadata.socials}/>
@@ -57,32 +94,30 @@ export default ({ children, data }) =>
             textDecoration: 'none'
           }}
         >
-          <g.H3
-            marginTop={0}
-            marginBottom={rhythm(1/4)}
-            display={`inline-block`}
-            fontStyle={`normal`}
-            color='#303030'
-            textTransform="uppercase"
-          >
+          <SiteName>
             {data.site.siteMetadata.title}
-          </g.H3>
-          <g.P color='#303030'>
+          </SiteName>
+          <SiteDesc>
             Web Developer
-          </g.P>
+          </SiteDesc>
         </Link>
       </SiteTitle>
-      <g.Div
-        overflow="hidden"
-      >
+      <SiteMeta>
         <Email href="mailto:thanh4890@gmail.com">
           <FaMail css={{
             display: 'inline-block',
             marginRight: '5px'
           }}/>
           thanh4890@gmail.com
-        </Email>
-      </g.Div>
+        </Email>|
+        <Pdf href="/thanh4890-cv.pdf">
+          <FaPdf css={{
+            display: 'inline-block',
+            marginRight: '5px'
+          }}/>
+          PDF Version
+        </Pdf>
+      </SiteMeta>
     </g.Header>
     <hr/>
     {children()}

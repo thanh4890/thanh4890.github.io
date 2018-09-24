@@ -84,10 +84,10 @@ module.exports = {
         ]
       },
       {
-        name: 'My CV',
-        feature: '/thanh-cv.png',
+        name: 'maybe your projects',
+        feature: '/ampersand.jpg',
         images: [
-          '/thanh-cv.png',
+          '/ampersand.jpg',
         ]
       }
     ],

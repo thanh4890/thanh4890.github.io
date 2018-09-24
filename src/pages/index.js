@@ -111,14 +111,9 @@ export default ({ data }) => {
         )}
       </div>
 
-      <div css={{
-        padding: rhythm(.5),
-        backgroundColor: '#303030',
-        color: 'white',
-        textAlign: 'center'
-      }}>And great products on the future...</div>
-
-      <Separator/>
+      <Separator css={{
+        marginTop: 0
+      }}/>
 
       <g.H1 id="technical-skills">
         Skills

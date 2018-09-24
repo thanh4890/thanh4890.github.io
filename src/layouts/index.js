@@ -110,7 +110,7 @@ export default ({ children, data }) =>
           }}/>
           thanh4890@gmail.com
         </Email>|
-        <Pdf href="/thanh4890-cv.pdf">
+        <Pdf href="/Thanh-Nguyen-Dac-CV.pdf">
           <FaPdf css={{
             display: 'inline-block',
             marginRight: '5px'

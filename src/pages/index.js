@@ -79,6 +79,28 @@ export default ({ data }) => {
 
         <g.H3 css={{
           marginBottom: rhythm(1/2)
+        }}>React Starter Kit</g.H3>
+
+        <p>A React starter kit based on <a href="https://github.com/facebook/create-react-app">create-react-app</a> with <a href="https://reacttraining.com/react-router/">React Router</a>, <a href="https://redux.js.org/">Redux</a> and <a href="https://webpack.js.org/concepts/hot-module-replacement/">HMR</a> support. The kit also provided a based code structure.</p>
+
+        <ul>
+          <li>Github repo: <a href="https://github.com/thanh4890/react-starter-kit">https://github.com/thanh4890/react-starter-kit</a></li>
+        </ul>
+
+        <Skills>
+          <Skill>React</Skill>
+          <Skill>Redux</Skill>
+          <Skill>React Router</Skill>
+          <Skill>HMR</Skill>
+          <Skill>create-react-app</Skill>
+        </Skills>
+
+        <div css={{
+          marginBottom: rhythm(1)
+        }}/>
+
+        <g.H3 css={{
+          marginBottom: rhythm(1/2)
         }}>Punicatheme</g.H3>
 
         <p>Punicatheme is an author on some online marketplaces (<a href="https://themeforest.net/user/punicavn/portfolio">Themeforest</a>, <a href="https://creativemarket.com/punicatheme/shop">Creative Market</a> and <a href="http://www.mojo-themes.com/user/punicatheme/">Mojo Themes</a>) that provides high quality WordPress themes and website templates.</p>
@@ -94,6 +116,17 @@ export default ({ data }) => {
           </li>
           <li>Punicatheme documentation: <a href="https://punicatheme.github.io/docs/">https://punicatheme.github.io/docs/</a></li>
         </ul>
+
+        <Skills>
+          <Skill>HTML5</Skill>
+          <Skill>CSS3</Skill>
+          <Skill>JavaScript</Skill>
+          <Skill>jQuery</Skill>
+          <Skill>PHP</Skill>
+          <Skill>WordPress</Skill>
+          <Skill>Visual Composer</Skill>
+          <Skill>WooCommerce</Skill>
+        </Skills>
 
         <Separator/>
       </div>

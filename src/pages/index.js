@@ -5,6 +5,10 @@ import { rhythm } from "../utils/typography"
 import * as FontAwesome from 'react-icons/lib/fa'
 import Portfolio from '../components/Portfolio'
 
+const mediaQueries = {
+  phone: '@media only screen and (max-width: 660px)',
+}
+
 const Separator = g.hr({
   marginTop: rhythm(1),
   marginBottom: rhythm(1)
@@ -17,7 +21,7 @@ const Skills = g.div({
 const Skill = g.span({
   padding: '3px 8px',
   borderRadius: 3,
-  fontSize: 13,
+  fontSize: 16,
   color: '#555',
   display: 'inline-block',
   ':hover': {
@@ -28,22 +32,37 @@ const Skill = g.span({
 
 const Year = g.span({
   display: 'inline-block',
-  padding: '3px 8px',
+  padding: '7px 15px',
   borderRadius: 3,
   backgroundColor: '#303030',
-  fontSize: 14,
-  fontWeight: 'normal'
+  fontSize: 17,
+  fontWeight: 'normal',
+  marginRight: 10,
+  [mediaQueries.phone]: {
+    textAlign: 'center'
+  }
 })
 
 const Start = g.span({
-  color: '#eee'
+  color: '#eee',
+  [mediaQueries.phone]: {
+    display: 'block'
+  }
 })
 
 const End = g.span({
   display: 'inline-block',
   paddingLeft: 8,
-  color: '#aaa'
+  color: '#aaa',
+  [mediaQueries.phone]: {
+    paddingLeft: 0
+  }
 })
+
+const centerFlex = {
+  display: 'flex',
+  alignItems: 'center'
+}
 
 export default ({ data }) => {
   return (
@@ -53,7 +72,7 @@ export default ({ data }) => {
       </g.H1>
       {data.exp.edges.map(({node}, index) => (
         <div key={index}>
-          <h2>
+          <h2 css={centerFlex}>
             <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
           </h2>
 
@@ -73,7 +92,7 @@ export default ({ data }) => {
       <g.H1 id="spare-time">Spare Time</g.H1>
 
       <div>
-        <h2>
+        <h2 css={centerFlex}>
           <Year><Start>spare time</Start></Year> Personal projects
         </h2>
 
@@ -193,7 +212,8 @@ export default ({ data }) => {
       {data.edu.edges.map(({node}, index) => (
         <div key={index}>
           <h3 css={{
-            marginBottom: rhythm(1/2)
+            marginBottom: rhythm(1/2),
+            ...centerFlex
           }}>
             <Year><Start>{node.frontmatter.year}</Start></Year> {node.frontmatter.title}
           </h3>

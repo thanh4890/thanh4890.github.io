@@ -23,7 +23,8 @@ const Sidebar = g.div({
 })
 
 const List = g.ul({
-  listStyle: "none"
+  listStyle: "none",
+  margin: 0
 })
 
 const ListItem = g.li({
@@ -32,12 +33,13 @@ const ListItem = g.li({
 })
 
 const SocialItem = g.a({
-  padding: 5
+  padding: 5,
+  fontSize: 20
 })
 
 const SidebarLink = g.a({
   display: 'block',
-  paddingLeft: 40,
+  paddingLeft: 25,
   textTransform: 'uppercase',
   color: "white",
   ':visited': {

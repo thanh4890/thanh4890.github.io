@@ -61,7 +61,8 @@ const Email = g.a({
     color: 'white',
     '&:visited': {
       color: 'white'
-    }
+    },
+    textDecoration: 'none'
   },
   ':visited': {
     color: '#f85e23'
@@ -91,7 +92,10 @@ export default ({ children, data }) =>
       <SiteTitle>
         <Link to={`/`}
           css={{
-            textDecoration: 'none'
+            textDecoration: 'none',
+            ':hover': {
+              textDecoration: 'none'
+            }
           }}
         >
           <SiteName>

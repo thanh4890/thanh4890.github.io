@@ -6,6 +6,6 @@ end: 'Now'
 skills: 'React, Nodejs'
 ---
 
-![coming soon](https://ppgzone-39u4nsxgmu93y.netdna-ssl.com/wp-content/uploads/2017/12/comingsoon-800x445.jpg)
+![coming soon](https://velorbis.com/wp-content/uploads/2017/09/COMING-SOON.png)
 
-> The more I move, the more I grow :)
+> The more I move, the more I grow

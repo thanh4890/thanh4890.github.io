@@ -98,14 +98,19 @@ module.exports = {
           {
             name: 'JavaScript',
             level: 4
-          }, {
+          },
+          {
             name: 'PHP',
             level: 4
-          }
+          },
+          {
+            name: 'C/C++',
+            level: 2
+          },
         ],
       },
       {
-        name: 'Web',
+        name: 'Frontend',
         skills: [
           {
             name: 'JavaScript',
@@ -122,26 +127,125 @@ module.exports = {
           {
             name: 'React',
             level: 4
-          },{
+          },
+          {
             name: 'Redux',
             level: 4
           },
           {
-            name: 'PHP',
+            name: 'React Router',
             level: 4
-          }, {
+          },
+          {
+            name: 'jQuery',
+            level: 4
+          },
+          {
+            name: 'Google Map',
+            level: 3
+          },
+          {
+            name: 'Handlebars',
+            level: 4
+          },
+          {
+            name: 'Pug',
+            level: 4
+          },
+          {
+            name: 'Gatby.js',
+            level: 3
+          },
+          {
+            name: 'Next.js',
+            level: 3
+          },
+        ],
+      },
+      {
+        name: 'Industry Knowledge',
+        skills: [
+          {
+            name: 'Software Development',
+            level: 3
+          },
+          {
+            name: 'Web Development',
+            level: 4
+          },
+          {
+            name: 'Web Design',
+            level: 3
+          },
+          {
+            name: 'Debugging',
+            level: 4
+          },
+          {
+            name: 'Design Patterns',
+            level: 4
+          },
+          {
+            name: 'Agile',
+            level: 3
+          },
+          {
+            name: 'Scrum',
+            level: 3
+          },
+          {
+            name: 'OOP',
+            level: 3
+          },
+          {
+            name: 'R&D',
+            level: 4
+          },
+          {
+            name: 'Data Analysis',
+            level: 3
+          },
+          {
+            name: 'Computer Science',
+            level: 3
+          },
+          {
+            name: 'Database Design',
+            level: 3
+          },
+          {
+            name: 'Software Project Management',
+            level: 3
+          },
+        ]
+      },
+      {
+        name: 'Tools & Technologies',
+        skills: [
+          {
+            name: 'Node.js',
+            level: 3
+          },
+          {
+            name: 'Docker',
+            level: 3
+          },
+          {
+            name: 'SQL',
+            level: 3
+          },
+          {
             name: 'MySQL',
+            level: 3,
+          },
+          {
+            name: 'MongoDB',
             level: 3,
           },
           {
             name: 'WordPress',
             level: 4
-          }
-        ],
-      },
-      {
-        name: 'Others',
-        skills: [
+          },
           {
             name: 'GIT',
             level: 4
@@ -151,14 +255,39 @@ module.exports = {
             level: 2.5
           },
           {
+            name: 'Linux',
+            level: 3
+          },
+          {
+            name: 'Mac OS',
+            level: 3
+          },
+          {
+            name: 'Firebase',
+            level: 3
+          },
+        ],
+      },
+      {
+        name: 'Other Skills',
+        skills: [
+          {
             name: 'Sublime Text',
             level: 4,
           },
           {
             name: 'Vim',
             level: 3.5
+          },
+          {
+            name: 'Server Side Rendering',
+            level: 3.5
+          },
+          {
+            name: 'DevOps',
+            level: 3.5
           }
-        ],
+        ]
       }
     ],
     education: [

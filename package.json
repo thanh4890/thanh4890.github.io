@@ -9,6 +9,7 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -b master -d public"
   },
   "dependencies": {
+    "compass-vertical-rhythm": "^1.4.5",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.32",
     "gatsby-plugin-favicon": "^2.1.1",
@@ -19,11 +20,12 @@
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-remark": "^1.7.25",
     "glamorous": "^4.11.0",
+    "gray-percentage": "^2.0.0",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
     "react-image-lightbox": "^4.6.0",
     "react-modal": "^3.3.2",
-    "typography-theme-moraga": "^0.15.10"
+    "typography-breakpoint-constants": "^0.15.10"
   },
   "devDependencies": {
     "bootstrap": "^4.1.0",

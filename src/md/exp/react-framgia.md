@@ -2,7 +2,7 @@
 title: React Developer at Framgia
 date: "2017-12-24"
 start: '2015'
-end: 'Now'
+end: '2018'
 skills: 'HTML5, CSS, JavaScript, React, Redux, Flux, Plotly.js'
 ---
 

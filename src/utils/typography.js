@@ -1,6 +1,6 @@
 import Typography from "typography";
-import wordpress2012 from "typography-theme-moraga";
+import ndtTheme from "./typography-theme";
 
-const typography = new Typography(wordpress2012);
+const typography = new Typography(ndtTheme);
 
 module.exports = typography;

@@ -1,2 +1,2 @@
-webpackJsonp([60335399758886],{197:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Thanh Nguyen Dac",socials:[{href:"https://github.com/thanh4890",icon:"FaGithub"},{href:"https://twitter.com/thanh4890",icon:"FaTwitter"}]}}},layoutContext:{}}}});
+webpackJsonp([60335399758886],{198:function(t,a){t.exports={data:{site:{siteMetadata:{title:"Thanh Nguyen Dac",socials:[{href:"https://github.com/thanh4890",icon:"FaGithub"},{href:"https://twitter.com/thanh4890",icon:"FaTwitter"}]}}},layoutContext:{}}}});
 //# sourceMappingURL=path----f1dc70ab94206aef1d16.js.map

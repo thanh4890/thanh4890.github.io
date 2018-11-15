@@ -9,11 +9,11 @@ import FaPdf from 'react-icons/lib/fa/file-pdf-o'
 import './bootstrap.scss'
 
 const mediaQueries = {
-  phone: '@media only screen and (max-width: 720px)',
+  phone: '@media only screen and (max-width: 660px)',
 }
 
 const SiteTitle = g.div({
-  width: '50%',
+  width: '40%',
   float: 'left',
   ':hover .site-name': {
     color: '#f85e23'

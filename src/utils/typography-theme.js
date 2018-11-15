@@ -6,7 +6,7 @@ import verticalRhythm from 'compass-vertical-rhythm'
 
 const theme: OptionsType = {
   title: 'NDT-Blog',
-  baseFontSize: '16px',
+  baseFontSize: '18px',
   baseLineHeight: 1.56,
   googleFonts: [
     {

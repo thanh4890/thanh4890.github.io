@@ -29,7 +29,8 @@ const List = g.ul({
 
 const ListItem = g.li({
   margin: 0,
-  padding: 0
+  padding: 0,
+  textAlign: 'center'
 })
 
 const SocialItem = g.a({
@@ -39,7 +40,6 @@ const SocialItem = g.a({
 
 const SidebarLink = g.a({
   display: 'block',
-  paddingLeft: 25,
   textTransform: 'uppercase',
   color: "white",
   ':visited': {
@@ -96,7 +96,7 @@ export default ({ socials }) =>
         <SidebarLink href="#portfolio">Portfolio</SidebarLink>
       </ListItem>
       <ListItem>
-        <SidebarLink href="#technical-skills">Technical skills</SidebarLink>
+        <SidebarLink href="#technical-skills">Skills</SidebarLink>
       </ListItem>
       <PokeItem>
         <PokeLink href="mailto:thanh4890@gmail.com">Poke Me</PokeLink>

@@ -144,9 +144,10 @@ export default ({ data }) => {
           <g.H3 css={{
             marginBottom: rhythm(1/2)
           }}>{group.name}</g.H3>
-          <g.Div css={{
-            marginBottom: rhythm(1)
-          }}>
+          <g.Div className="row"
+            css={{
+              marginBottom: rhythm(1)
+            }}>
             {group.skills.map((skill, index) => {
               let levels = []
               let stars = Math.floor(skill.level)
@@ -162,7 +163,7 @@ export default ({ data }) => {
                 levels.push(<FontAwesome.FaStarO key={levels.length}/>)
               }
               return (
-                <div key={index}>
+                <div className="col-md-6" key={index}>
                   <Skill>
                     <span css={{marginRight: 10}}>{levels}</span>{skill.name}
                   </Skill>

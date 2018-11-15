@@ -9,7 +9,7 @@ import FaPdf from 'react-icons/lib/fa/file-pdf-o'
 import './bootstrap.scss'
 
 const mediaQueries = {
-  phone: '@media only screen and (max-width: 660px)',
+  phone: '@media only screen and (max-width: 720px)',
 }
 
 const SiteTitle = g.div({

@@ -44,6 +44,7 @@ const Year = g.span({
 })
 
 const Start = g.span({
+  fontFamily: 'Lato',
   color: '#eee',
   [mediaQueries.phone]: {
     display: 'block'
@@ -51,6 +52,7 @@ const Start = g.span({
 })
 
 const End = g.span({
+  fontFamily: 'Lato',
   display: 'inline-block',
   paddingLeft: 8,
   color: '#aaa',

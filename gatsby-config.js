@@ -153,7 +153,7 @@ module.exports = {
             level: 4
           },
           {
-            name: 'Gatby.js',
+            name: 'Gatsby.js',
             level: 3
           },
           {

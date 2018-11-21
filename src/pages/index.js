@@ -124,7 +124,7 @@ export default ({ data }) => {
 
       <g.H1 id="portfolio">Portfolio</g.H1>
 
-      <p>Below was what I developed, maintained and contributed. So many projects but I just showed what I like the most here.</p>
+      <p>Below was what I developed, maintained and contributed. So many projects but I have just showed what I like the most here.</p>
 
       <div className="row">
         {data.site.siteMetadata.portfolio.map((portfolio, key) =>

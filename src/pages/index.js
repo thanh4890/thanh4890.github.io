@@ -263,7 +263,7 @@ export const query = graphql`
         }
       }
     },
-    spare: allMarkdownRemark(filter: {
+    spare: allMarkdownRemark(sort: {fields: [frontmatter___start], order: DESC}, filter: {
       fileAbsolutePath: {
         regex: "/src\/md\/spare/"
       }}) {

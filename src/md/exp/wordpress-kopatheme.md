@@ -6,8 +6,10 @@ end: '2015'
 skills: 'HTML, CSS, JavaScript, jQuery, PHP, WordPress'
 ---
 
-Kopatheme is a Professional website development company in Ha Noi City, Vietnam.
+Kopatheme was established in 2010 – an experienced web design company in crafting highly functional, customizable WordPress themes, plugins and HTML Templates.
 
 * Kopatheme website: [https://kopatheme.com](https://kopatheme.com)
 * Kopatheme on Themeforest: [https://themeforest.net/user/kopasoft/portfolio](https://themeforest.net/user/kopasoft/portfolio)
 * Kopatheme on WordPress.org [https://wordpress.org/themes/author/kopatheme/](https://wordpress.org/themes/author/kopatheme/)
+
+I worked as a WordPress developer at Kopatheme to produce new items every month. I also train other developers and support customers if needed.

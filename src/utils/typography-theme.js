@@ -10,17 +10,17 @@ const theme: OptionsType = {
   baseLineHeight: 1.56,
   googleFonts: [
     {
-      name: 'PT Serif',
+      name: 'Roboto Condensed',
       styles: ['400'],
     },
     {
-      name: 'Lato',
+      name: 'Roboto',
       styles: ['400'],
     },
   ],
   scaleRatio: 2.5,
-  headerFontFamily: ['PT Serif', 'serif'],
-  bodyFontFamily: ['Lato', 'sans-serif'],
+  headerFontFamily: ['Roboto Condensed', 'sans-serif'],
+  bodyFontFamily: ['Roboto', 'sans-serif'],
   headerColor: '#383736',
   bodyColor: '#383736',
   headerWeight: '400',

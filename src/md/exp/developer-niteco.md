@@ -3,9 +3,11 @@ title: Developer at Niteco
 date: "2018-11-15"
 start: '2018'
 end: 'Now'
-skills: 'React, Nodejs'
+skills: 'React, Node.js'
 ---
 
-![coming soon](https://velorbis.com/wp-content/uploads/2017/09/COMING-SOON.png)
+Niteco is a world-class software development company with expertise in building custom applications, mobile solutions, and implementation of web content management and e-commerce strategies.
 
-> The more I move, the more I grow
+* Niteco website: https://niteco.com
+
+As a full-stack JavaScript developer, my main responsibility at Niteco is to develop and maintain responsive and complex websites for customers, with the combination of React on frontend and Node.js on backend.

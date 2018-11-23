@@ -10,6 +10,7 @@ Framgia Inc. is a Japanese incorporation operating in the IT field, specializing
 
 * Framgia website: [https://framgia.com](https://framgia.com)
 
+My main position at Framgia is a React developer and a team leader of 10+ members.
 The main projects that I contributed at Framgia are ReasonWhy's projects: WhytLink, WhytPlot and Findme.
 <br/>ReasonWhy Inc. specializes in services related to the medical field. It was founded on July 7, 2011 and is based in Japan.
 

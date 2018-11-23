@@ -227,6 +227,10 @@ module.exports = {
             level: 3
           },
           {
+            name: 'Express',
+            level: 3.5
+          },
+          {
             name: 'Docker',
             level: 3
           },
@@ -241,6 +245,10 @@ module.exports = {
           {
             name: 'MongoDB',
             level: 3,
+          },
+          {
+            name: 'GraphQL',
+            level: 2
           },
           {
             name: 'WordPress',

@@ -5,7 +5,7 @@ This site was built based on [Gatsby](https://www.gatsbyjs.org/)
 `yarn`
 
 ## Running in development
-`yarn develop`
+`yarn start`
 
 ## Build static files
 `yarn build`

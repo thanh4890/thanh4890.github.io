@@ -90,7 +90,7 @@ export default ({ socials }) =>
         <SidebarLink href="#experience">Experience</SidebarLink>
       </ListItem>
       <ListItem>
-        <SidebarLink href="#technical-skills">Technical Skills</SidebarLink>
+        <SidebarLink href="#technical-skills">Skills</SidebarLink>
       </ListItem>
       <ListItem>
         <SidebarLink href="#portfolio">Portfolio</SidebarLink>

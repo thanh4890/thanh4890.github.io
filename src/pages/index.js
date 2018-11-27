@@ -74,12 +74,12 @@ export default ({ data }) => {
   return (
     <div>
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-md-4">
           <g.H1 id="experience">
             Experience
           </g.H1>
         </div>
-        <div className="col-lg-8">
+        <div className="col-md-8">
           {data.exp.edges.map(({node}, index) => (
             <div key={index}>
               <ItemTitle>
@@ -105,11 +105,11 @@ export default ({ data }) => {
 
 
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-md-4">
           <g.H1 id="spare-time">Spare Time</g.H1>
         </div>
 
-        <div className="col-lg-8">
+        <div className="col-md-8">
           <ItemTitle>
             <Year><Start>spare time</Start></Year> Personal projects
           </ItemTitle>
@@ -138,16 +138,16 @@ export default ({ data }) => {
       <Separator/>
 
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-md-4">
           <g.H1 id="portfolio">Portfolio</g.H1>
         </div>
 
-        <div className="col-lg-8">
+        <div className="col-md-8">
           <p>Below was what I developed, maintained and contributed. So many projects but I have just showed what I like the most here.</p>
 
           <div className="row">
             {data.site.siteMetadata.portfolio.map((portfolio, key) =>
-              <div key={key} className="col-md-4 col-sm-6" css={{
+              <div key={key} className="col-lg-4 col-md-6 col-sm-6" css={{
                 marginBottom: rhythm(1)
               }}>
                 <Portfolio {...portfolio}/>
@@ -160,13 +160,13 @@ export default ({ data }) => {
       <Separator/>
 
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-md-4">
           <g.H1 id="technical-skills">
             Skills
           </g.H1>
         </div>
 
-        <div className="col-lg-8">
+        <div className="col-md-8">
           {data.site.siteMetadata.skills.map((group, index) =>
             <div key={index}>
               <g.H3 css={{
@@ -207,12 +207,12 @@ export default ({ data }) => {
       <Separator/>
 
       <div className="row">
-        <div className="col-lg-4">
+        <div className="col-md-4">
           <g.H1 id="education">
             Education
           </g.H1>
         </div>
-        <div className="col-lg-8">
+        <div className="col-md-8">
           {data.edu.edges.map(({node}, index) => (
             <div key={index}>
               <h3 css={{

@@ -73,7 +73,7 @@ const Email = g.a({
   [mediaQueries.phone]: {
     float: 'none',
     marginLeft: 0,
-    marginBottom: rhythm(1)
+    marginBottom: 0
   }
 });
 

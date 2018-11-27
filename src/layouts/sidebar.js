@@ -7,7 +7,7 @@ import avatar from './avatar.jpg'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 const mediaQueries = {
-  desktop: '@media only screen and (max-width: 1300px)',
+  desktop: '@media only screen and (max-width: 1450px)',
 }
 
 const Sidebar = g.div({

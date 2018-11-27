@@ -7,7 +7,7 @@ import avatar from './avatar.jpg'
 import * as FontAwesome from 'react-icons/lib/fa'
 
 const mediaQueries = {
-  desktop: '@media only screen and (max-width: 1300px)',
+  desktop: '@media only screen and (max-width: 1450px)',
 }
 
 const Sidebar = g.div({
@@ -90,13 +90,16 @@ export default ({ socials }) =>
         <SidebarLink href="#experience">Experience</SidebarLink>
       </ListItem>
       <ListItem>
-        <SidebarLink href="#spare-time">Spare time</SidebarLink>
+        <SidebarLink href="#technical-skills">Skills</SidebarLink>
       </ListItem>
       <ListItem>
         <SidebarLink href="#portfolio">Portfolio</SidebarLink>
       </ListItem>
       <ListItem>
-        <SidebarLink href="#technical-skills">Skills</SidebarLink>
+        <SidebarLink href="#spare-time">Spare time</SidebarLink>
+      </ListItem>
+      <ListItem>
+        <SidebarLink href="#education">Education</SidebarLink>
       </ListItem>
       <PokeItem>
         <PokeLink href="mailto:thanh4890@gmail.com">Poke Me</PokeLink>

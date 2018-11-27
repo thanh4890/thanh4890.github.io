@@ -45,14 +45,17 @@ const SiteName = g.h3('site-name', {
 })
 
 const SiteDesc = g.p('site-desc', {
-  color: '#303030'
+  color: '#303030',
+  marginBottom: 0,
+  [mediaQueries.phone]: {
+    marginBottom: rhythm(1/2)
+  }
 })
 
 const Email = g.a({
   display: 'inline-block',
   color: '#f85e23',
   marginLeft: 10,
-  marginBottom: rhythm(1),
   padding: '1px 3px',
   borderRadius: 2,
   textDecoration: 'none',
@@ -70,7 +73,7 @@ const Email = g.a({
   [mediaQueries.phone]: {
     float: 'none',
     marginLeft: 0,
-    marginBottom: rhythm(1)
+    marginBottom: 0
   }
 });
 
@@ -81,7 +84,7 @@ const Pdf = g(Email)({
 export default ({ children, data }) =>
   <g.Div
     margin={`0 auto`}
-    maxWidth={740}
+    maxWidth={960}
     padding={20}
     paddingTop={rhythm(1.5)}
   >
@@ -123,7 +126,11 @@ export default ({ children, data }) =>
         </Pdf>
       </SiteMeta>
     </g.Header>
-    <hr/>
+    <hr css={{
+      marginTop: rhythm(1.5),
+      marginBottom: rhythm(1.5),
+      backgroundColor: '#dadada'
+    }}/>
     {children()}
   </g.Div>
 

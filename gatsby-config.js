@@ -10,6 +10,10 @@ module.exports = {
       {
         icon: 'FaTwitter',
         href: 'https://twitter.com/thanh4890'
+      },
+      {
+        icon: 'FaLinkedin',
+        href: 'https://www.linkedin.com/in/thanh4890/'
       }
     ],
     portfolio: [

@@ -11,7 +11,8 @@ const mediaQueries = {
 
 const Separator = g.hr({
   marginTop: rhythm(1),
-  marginBottom: rhythm(1)
+  marginBottom: rhythm(1),
+  backgroundColor: '#dadada'
 })
 
 const Skills = g.div({
@@ -64,146 +65,179 @@ const centerFlex = {
   alignItems: 'center'
 }
 
+const ItemTitle = g.h2({
+  paddingTop: 10,
+  ...centerFlex
+})
+
 export default ({ data }) => {
   return (
     <div>
-      <g.H1 id="experience">
-        Experience
-      </g.H1>
-      {data.exp.edges.map(({node}, index) => (
-        <div key={index}>
-          <h2 css={centerFlex}>
-            <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
-          </h2>
-
-          <div dangerouslySetInnerHTML={{ __html: node.html }} />
-
-          <Skills>
-            {node.frontmatter.skills.split(',').map((skill, index) =>
-              <Skill key={index}>{skill}</Skill>
-            )}
-          </Skills>
-
-          <Separator/>
-        </div>
-        )
-      )}
-
-      <g.H1 id="spare-time">Spare Time</g.H1>
-
-      <div>
-        <h2 css={centerFlex}>
-          <Year><Start>spare time</Start></Year> Personal projects
-        </h2>
-
-        {data.spare.edges.map(({node}, index) =>
-          <div key={index}>
-            <g.H3 css={{
-              marginBottom: rhythm(1/2)
-            }}>{node.frontmatter.title}</g.H3>
-
-            <div dangerouslySetInnerHTML={{ __html: node.html }} />
-
-            <Skills>
-              {node.frontmatter.skills.split(',').map((skill, index) =>
-                <Skill key={index}>{skill}</Skill>
-              )}
-            </Skills>
-
-            <div css={{
-              marginBottom: rhythm(1)
-            }}/>
-          </div>
-        )}
-
-        <Separator/>
-      </div>
-
-
-      <g.H1 id="portfolio">Portfolio</g.H1>
-
-      <p>Below was what I developed, maintained and contributed. So many projects but I have just showed what I like the most here.</p>
-
       <div className="row">
-        {data.site.siteMetadata.portfolio.map((portfolio, key) =>
-          <div key={key} className="col-md-4 col-sm-6" css={{
-            marginBottom: rhythm(1)
-          }}>
-            <Portfolio {...portfolio}/>
-          </div>
-        )}
-      </div>
-
-      <Separator css={{
-        marginTop: 0
-      }}/>
-
-      <g.H1 id="technical-skills">
-        Skills
-      </g.H1>
-      {data.site.siteMetadata.skills.map((group, index) =>
-        <div key={index}>
-          <g.H3 css={{
-            marginBottom: rhythm(1/2)
-          }}>{group.name}</g.H3>
-          <g.Div className="row"
-            css={{
-              marginBottom: rhythm(1)
-            }}>
-            {group.skills.map((skill, index) => {
-              let levels = []
-              let stars = Math.floor(skill.level)
-              let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
-              let starOs = 5 - stars - starHalfs
-              for (let i = 0; i < stars; i++) {
-                levels.push(<FontAwesome.FaStar key={levels.length}/>)
-              }
-              if (starHalfs) {
-                levels.push(<FontAwesome.FaStarHalfEmpty key={levels.length}/>)
-              }
-              for (let i = 0; i < starOs; i++) {
-                levels.push(<FontAwesome.FaStarO key={levels.length}/>)
-              }
-              return (
-                <div className="col-md-6" key={index}>
-                  <Skill>
-                    <span css={{marginRight: 10}}>{levels}</span>{skill.name}
-                  </Skill>
-                </div>
-              )
-            })}
-          </g.Div>
+        <div className="col-lg-4">
+          <g.H1 id="experience">
+            Experience
+          </g.H1>
         </div>
-      )}
+        <div className="col-lg-8">
+          {data.exp.edges.map(({node}, index) => (
+            <div key={index}>
+              <ItemTitle>
+                <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
+              </ItemTitle>
+
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+
+              <Skills>
+                {node.frontmatter.skills.split(',').map((skill, index) =>
+                  <Skill key={index}>{skill}</Skill>
+                )}
+              </Skills>
+
+              {(index < (data.exp.edges.length - 1)) &&<Separator/>}
+            </div>
+            )
+          )}
+        </div>
+      </div>
 
       <Separator/>
 
-      <g.H1 id="education">
-        Education
-      </g.H1>
-      {data.edu.edges.map(({node}, index) => (
-        <div key={index}>
-          <h3 css={{
-            marginBottom: rhythm(1/2),
-            ...centerFlex
-          }}>
-            <Year><Start>{node.frontmatter.year}</Start></Year> {node.frontmatter.title}
-          </h3>
-          <div dangerouslySetInnerHTML={{ __html: node.html }} />
+
+      <div className="row">
+        <div className="col-lg-4">
+          <g.H1 id="spare-time">Spare Time</g.H1>
         </div>
-      ))}
-      {data.site.siteMetadata.education.map((group, index) =>
-        <div key={index}>
-          <g.H3 css={{
-            marginBottom: rhythm(1/2)
-          }}>{group.name}</g.H3>
-          <ul>
-            {group.items.map((skill, index) =>
-              <li key={index}>{skill}</li>
+
+        <div className="col-lg-8">
+          <ItemTitle>
+            <Year><Start>spare time</Start></Year> Personal projects
+          </ItemTitle>
+          {data.spare.edges.map(({node}, index) =>
+            <div key={index}>
+              <g.H3 css={{
+                marginBottom: rhythm(1/2)
+              }}>{node.frontmatter.title}</g.H3>
+
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+
+              <Skills>
+                {node.frontmatter.skills.split(',').map((skill, index) =>
+                  <Skill key={index}>{skill}</Skill>
+                )}
+              </Skills>
+
+              <div css={{
+                marginBottom: rhythm(1)
+              }}/>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <Separator/>
+
+      <div className="row">
+        <div className="col-lg-4">
+          <g.H1 id="portfolio">Portfolio</g.H1>
+        </div>
+
+        <div className="col-lg-8">
+          <p>Below was what I developed, maintained and contributed. So many projects but I have just showed what I like the most here.</p>
+
+          <div className="row">
+            {data.site.siteMetadata.portfolio.map((portfolio, key) =>
+              <div key={key} className="col-md-4 col-sm-6" css={{
+                marginBottom: rhythm(1)
+              }}>
+                <Portfolio {...portfolio}/>
+              </div>
             )}
-          </ul>
+          </div>
         </div>
-      )}
+      </div>
+
+      <Separator/>
+
+      <div className="row">
+        <div className="col-lg-4">
+          <g.H1 id="technical-skills">
+            Skills
+          </g.H1>
+        </div>
+
+        <div className="col-lg-8">
+          {data.site.siteMetadata.skills.map((group, index) =>
+            <div key={index}>
+              <g.H3 css={{
+                marginBottom: rhythm(1/2)
+              }}>{group.name}</g.H3>
+              <g.Div className="row"
+                css={{
+                  marginBottom: rhythm(1)
+                }}>
+                {group.skills.map((skill, index) => {
+                  let levels = []
+                  let stars = Math.floor(skill.level)
+                  let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
+                  let starOs = 5 - stars - starHalfs
+                  for (let i = 0; i < stars; i++) {
+                    levels.push(<FontAwesome.FaStar key={levels.length}/>)
+                  }
+                  if (starHalfs) {
+                    levels.push(<FontAwesome.FaStarHalfEmpty key={levels.length}/>)
+                  }
+                  for (let i = 0; i < starOs; i++) {
+                    levels.push(<FontAwesome.FaStarO key={levels.length}/>)
+                  }
+                  return (
+                    <div className="col-md-6" key={index}>
+                      <Skill>
+                        <span css={{marginRight: 10}}>{levels}</span>{skill.name}
+                      </Skill>
+                    </div>
+                  )
+                })}
+              </g.Div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <Separator/>
+
+      <div className="row">
+        <div className="col-lg-4">
+          <g.H1 id="education">
+            Education
+          </g.H1>
+        </div>
+        <div className="col-lg-8">
+          {data.edu.edges.map(({node}, index) => (
+            <div key={index}>
+              <h3 css={{
+                marginBottom: rhythm(1/2),
+                ...centerFlex
+              }}>
+                <Year><Start>{node.frontmatter.year}</Start></Year> {node.frontmatter.title}
+              </h3>
+              <div dangerouslySetInnerHTML={{ __html: node.html }} />
+            </div>
+          ))}
+          {data.site.siteMetadata.education.map((group, index) =>
+            <div key={index}>
+              <g.H3 css={{
+                marginBottom: rhythm(1/2)
+              }}>{group.name}</g.H3>
+              <ul>
+                {group.items.map((skill, index) =>
+                  <li key={index}>{skill}</li>
+                )}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 };

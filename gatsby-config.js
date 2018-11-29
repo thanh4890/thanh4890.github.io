@@ -101,7 +101,7 @@ module.exports = {
         skills: [
           {
             name: 'JavaScript',
-            level: 4
+            level: 5
           },
           {
             name: 'PHP',
@@ -118,7 +118,7 @@ module.exports = {
         skills: [
           {
             name: 'JavaScript',
-            level: 4
+            level: 5
           },
           {
             name: 'HTML5',

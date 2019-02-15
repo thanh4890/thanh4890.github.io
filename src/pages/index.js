@@ -143,8 +143,6 @@ export default ({ data }) => {
         </div>
 
         <div className="col-md-8">
-          <p>Below was what I developed, maintained and contributed. So many projects but I have just showed what I like the most here.</p>
-
           <div className="row">
             {data.site.siteMetadata.portfolio.map((portfolio, key) =>
               <div key={key} className="col-lg-4 col-md-6 col-sm-6" css={{

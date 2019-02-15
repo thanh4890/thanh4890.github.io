@@ -9,5 +9,3 @@ skills: 'React, Node.js, JavaScript'
 Niteco is a world-class software development company with expertise in building custom applications, mobile solutions, and implementation of web content management and e-commerce strategies.
 
 * Niteco website: https://niteco.com
-
-As a full-stack JavaScript developer, my main responsibility at Niteco is to develop and maintain responsive and complex websites for customers, with the combination of React on frontend and Node.js on backend.

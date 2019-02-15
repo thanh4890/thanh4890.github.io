@@ -145,23 +145,7 @@ module.exports = {
             level: 4
           },
           {
-            name: 'Google Map',
-            level: 3
-          },
-          {
-            name: 'Handlebars',
-            level: 4
-          },
-          {
-            name: 'Pug',
-            level: 4
-          },
-          {
             name: 'Gatsby.js',
-            level: 3
-          },
-          {
-            name: 'Next.js',
             level: 3
           },
         ],
@@ -261,18 +245,6 @@ module.exports = {
           {
             name: 'GIT',
             level: 4
-          },
-          {
-            name: 'SVN',
-            level: 2.5
-          },
-          {
-            name: 'Linux',
-            level: 3
-          },
-          {
-            name: 'Mac OS',
-            level: 3
           },
           {
             name: 'Firebase',

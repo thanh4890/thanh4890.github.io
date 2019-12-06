@@ -1,5 +1,5 @@
 ---
-title: Developer at Niteco
+title: Frontend Developer at Niteco
 date: "2018-11-15"
 start: '2018'
 end: 'Now'

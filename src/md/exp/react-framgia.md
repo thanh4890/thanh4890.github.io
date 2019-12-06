@@ -1,5 +1,5 @@
 ---
-title: React Developer at Framgia
+title: Developer/Leader at Framgia
 date: "2017-12-24"
 start: '2015'
 end: '2018'

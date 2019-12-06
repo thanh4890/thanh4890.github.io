@@ -1,6 +1,5 @@
 import React from "react";
 import g from "glamorous";
-import { css } from "glamor";
 import { rhythm } from "../utils/typography";
 import {Link} from "gatsby"
 import avatar from './avatar.jpg'

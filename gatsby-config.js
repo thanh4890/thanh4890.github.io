@@ -1,5 +1,6 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://thanh4890.netlify.com`,
     title: `Thanh Nguyen Dac`,
     author: `Thanh Nguyen Dac`,
     description: `Thanh Nguyen Dac personal site`,

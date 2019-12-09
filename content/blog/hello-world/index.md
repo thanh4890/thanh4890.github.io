@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: "2019-12-06T10:11:16Z"
-description: "Hello World"
+description: "This is my first post on my new blog! How exciting!"
 ---
 
 This is my first post on my new blog! How exciting!

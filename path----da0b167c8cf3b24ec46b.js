@@ -1,2 +1,0 @@
-webpackJsonp([60335399758886],{198:function(t,i){t.exports={data:{site:{siteMetadata:{title:"Thanh Nguyen Dac",socials:[{href:"https://github.com/thanh4890",icon:"FaGithub"},{href:"https://twitter.com/thanh4890",icon:"FaTwitter"},{href:"https://www.linkedin.com/in/thanh4890/",icon:"FaLinkedin"}]}}},layoutContext:{}}}});
-//# sourceMappingURL=path----da0b167c8cf3b24ec46b.js.map

@@ -1,10 +1,9 @@
 import React from "react";
 import g from "glamorous";
-import { css } from "glamor";
 import { rhythm } from "../utils/typography";
-import Link from "gatsby-link"
+import {Link} from "gatsby"
 import avatar from './avatar.jpg'
-import * as FontAwesome from 'react-icons/lib/fa'
+import * as FontAwesome from 'react-icons/fa'
 
 const mediaQueries = {
   desktop: '@media only screen and (max-width: 1450px)',
@@ -33,12 +32,16 @@ const ListItem = g.li({
   textAlign: 'center'
 })
 
-const SocialItem = g.a({
+const NoBoxShadowLink = g.a({
+  boxShadow: 'none'
+})
+
+const SocialItem = g(NoBoxShadowLink)({
   padding: 5,
   fontSize: 20
 })
 
-const SidebarLink = g.a({
+const SidebarLink = g(NoBoxShadowLink)({
   display: 'block',
   textTransform: 'uppercase',
   color: "white",

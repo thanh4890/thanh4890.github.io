@@ -1,6 +1,6 @@
 import React from 'react'
 import Lightbox from 'react-image-lightbox'
-import { withPrefix } from 'gatsby-link'
+import { withPrefix } from 'gatsby'
 
 class Portfolio extends React.Component {
   constructor(props) {

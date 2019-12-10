@@ -1,311 +1,78 @@
 import React from "react"
-import g from "glamorous"
-import Link from "gatsby-link"
+import { Link, graphql } from "gatsby"
+
+import Bio from "../components/bio"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import * as FontAwesome from 'react-icons/lib/fa'
-import Portfolio from '../components/Portfolio'
 
-const mediaQueries = {
-  phone: '@media only screen and (max-width: 660px)',
+class BlogIndex extends React.Component {
+  render() {
+    const { data } = this.props
+    const siteTitle = data.site.siteMetadata.title
+    const posts = data.allMarkdownRemark.edges
+
+    return (
+      <Layout location={this.props.location} title={siteTitle}>
+        <SEO title="Blog - All posts" />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <article key={node.fields.slug}>
+              <header>
+                <h3
+                  style={{
+                    marginBottom: rhythm(1 / 4),
+                  }}
+                >
+                  <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small>{node.frontmatter.date}</small>
+              </header>
+              <section>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: node.frontmatter.description || node.excerpt,
+                  }}
+                />
+              </section>
+            </article>
+          )
+        })}
+      </Layout>
+    )
+  }
 }
 
-const Separator = g.hr({
-  marginTop: rhythm(1),
-  marginBottom: rhythm(1),
-  backgroundColor: '#dadada'
-})
+export default BlogIndex
 
-const Skills = g.div({
-  marginLeft: rhythm(1.2)
-})
-
-const Skill = g.span({
-  padding: '3px 8px',
-  borderRadius: 3,
-  fontSize: 16,
-  color: '#555',
-  display: 'inline-block',
-  ':hover': {
-    color: '#ddd',
-    backgroundColor: '#303030'
-  }
-})
-
-const Year = g.span({
-  display: 'inline-block',
-  padding: '7px 15px',
-  borderRadius: 3,
-  backgroundColor: '#303030',
-  fontSize: 17,
-  fontWeight: 'normal',
-  marginRight: 10,
-  [mediaQueries.phone]: {
-    textAlign: 'center'
-  }
-})
-
-const Start = g.span({
-  color: '#eee',
-  [mediaQueries.phone]: {
-    display: 'block'
-  }
-})
-
-const End = g.span({
-  display: 'inline-block',
-  paddingLeft: 8,
-  color: '#aaa',
-  [mediaQueries.phone]: {
-    paddingLeft: 0
-  }
-})
-
-const centerFlex = {
-  display: 'flex',
-  alignItems: 'center'
-}
-
-const ItemTitle = g.h2({
-  paddingTop: 10,
-  ...centerFlex
-})
-
-export default ({ data }) => {
-  return (
-    <div>
-      <div className="row">
-        <div className="col-md-4">
-          <g.H1 id="experience">
-            Experience
-          </g.H1>
-        </div>
-        <div className="col-md-8">
-          {data.exp.edges.map(({node}, index) => (
-            <div key={index}>
-              <ItemTitle>
-                <Year><Start>{node.frontmatter.start}</Start> <End>{node.frontmatter.end}</End></Year> {node.frontmatter.title}
-              </ItemTitle>
-
-              <div dangerouslySetInnerHTML={{ __html: node.html }} />
-
-              <Skills>
-                {node.frontmatter.skills.split(',').map((skill, index) =>
-                  <Skill key={index}>{skill}</Skill>
-                )}
-              </Skills>
-
-              {(index < (data.exp.edges.length - 1)) &&<Separator/>}
-            </div>
-            )
-          )}
-        </div>
-      </div>
-
-      <Separator/>
-
-
-      <div className="row">
-        <div className="col-md-4">
-          <g.H1 id="spare-time">Spare Time</g.H1>
-        </div>
-
-        <div className="col-md-8">
-          <ItemTitle>
-            <Year><Start>spare time</Start></Year> Personal projects
-          </ItemTitle>
-          {data.spare.edges.map(({node}, index) =>
-            <div key={index}>
-              <g.H3 css={{
-                marginBottom: rhythm(1/2)
-              }}>{node.frontmatter.title}</g.H3>
-
-              <div dangerouslySetInnerHTML={{ __html: node.html }} />
-
-              <Skills>
-                {node.frontmatter.skills.split(',').map((skill, index) =>
-                  <Skill key={index}>{skill}</Skill>
-                )}
-              </Skills>
-
-              <div css={{
-                marginBottom: rhythm(1)
-              }}/>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <Separator/>
-
-      <div className="row">
-        <div className="col-md-4">
-          <g.H1 id="portfolio">Portfolio</g.H1>
-        </div>
-
-        <div className="col-md-8">
-          <div className="row">
-            {data.site.siteMetadata.portfolio.map((portfolio, key) =>
-              <div key={key} className="col-lg-4 col-md-6 col-sm-6" css={{
-                marginBottom: rhythm(1)
-              }}>
-                <Portfolio {...portfolio}/>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <Separator/>
-
-      <div className="row">
-        <div className="col-md-4">
-          <g.H1 id="technical-skills">
-            Skills
-          </g.H1>
-        </div>
-
-        <div className="col-md-8">
-          {data.site.siteMetadata.skills.map((group, index) =>
-            <div key={index}>
-              <g.H3 css={{
-                marginBottom: rhythm(1/2)
-              }}>{group.name}</g.H3>
-              <g.Div className="row"
-                css={{
-                  marginBottom: rhythm(1)
-                }}>
-                {group.skills.map((skill, index) => {
-                  let levels = []
-                  let stars = Math.floor(skill.level)
-                  let starHalfs = ((skill.level - 0.5) === stars) ? 1 : 0
-                  let starOs = 5 - stars - starHalfs
-                  for (let i = 0; i < stars; i++) {
-                    levels.push(<FontAwesome.FaStar key={levels.length}/>)
-                  }
-                  if (starHalfs) {
-                    levels.push(<FontAwesome.FaStarHalfEmpty key={levels.length}/>)
-                  }
-                  for (let i = 0; i < starOs; i++) {
-                    levels.push(<FontAwesome.FaStarO key={levels.length}/>)
-                  }
-                  return (
-                    <div className="col-md-6" key={index}>
-                      <Skill>
-                        <span css={{marginRight: 10}}>{levels}</span>{skill.name}
-                      </Skill>
-                    </div>
-                  )
-                })}
-              </g.Div>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <Separator/>
-
-      <div className="row">
-        <div className="col-md-4">
-          <g.H1 id="education">
-            Education
-          </g.H1>
-        </div>
-        <div className="col-md-8">
-          {data.edu.edges.map(({node}, index) => (
-            <div key={index}>
-              <h3 css={{
-                marginBottom: rhythm(1/2),
-                ...centerFlex
-              }}>
-                <Year><Start>{node.frontmatter.year}</Start></Year> {node.frontmatter.title}
-              </h3>
-              <div dangerouslySetInnerHTML={{ __html: node.html }} />
-            </div>
-          ))}
-          {data.site.siteMetadata.education.map((group, index) =>
-            <div key={index}>
-              <g.H3 css={{
-                marginBottom: rhythm(1/2)
-              }}>{group.name}</g.H3>
-              <ul>
-                {group.items.map((skill, index) =>
-                  <li key={index}>{skill}</li>
-                )}
-              </ul>
-            </div>
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export const query = graphql`
-  query IndexQuery {
+export const pageQuery = graphql`
+  query {
     site {
       siteMetadata {
-        skills {
-          name
-          skills {
-            name
-            level
-          }
-        }
-        portfolio {
-          name
-          feature
-          images
-        }
-        education {
-          name
-          items
-        }
+        title
       }
     }
-    exp: allMarkdownRemark(sort: {fields: [frontmatter___start], order: DESC}, filter: {
-      fileAbsolutePath: {
-        regex: "/src\/md\/exp/"
-      }}) {
+    allMarkdownRemark(
+      filter: {fileAbsolutePath: {regex: "/content\/blog/"}}
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       edges {
         node {
-          html
+          excerpt
+          fields {
+            slug
+          }
           frontmatter {
+            date(formatString: "MMMM DD, YYYY")
             title
-            date(formatString: "DD MMMM, YYYY")
-            start
-            end
-            skills
+            description
           }
         }
       }
     }
-    edu: allMarkdownRemark(filter: {
-      fileAbsolutePath: {
-        regex: "/src\/md\/edu/"
-      }}) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            year
-          }
-        }
-      }
-    },
-    spare: allMarkdownRemark(sort: {fields: [frontmatter___start], order: DESC}, filter: {
-      fileAbsolutePath: {
-        regex: "/src\/md\/spare/"
-      }}) {
-      edges {
-        node {
-          html
-          frontmatter {
-            title
-            skills
-          }
-        }
-      }
-    },
   }
-`;
+`

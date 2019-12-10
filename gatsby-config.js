@@ -1,7 +1,13 @@
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
+    siteUrl: `https://thanh4890.netlify.com`,
     title: `Thanh Nguyen Dac`,
+    author: `Thanh Nguyen Dac`,
+    description: `Thanh Nguyen Dac personal site`,
+    social: {
+      twitter: 'thanh4890'
+    },
     socials: [
       {
         icon: 'FaGithub',
@@ -17,6 +23,21 @@ module.exports = {
       }
     ],
     portfolio: [
+      {
+        name: 'EzBizTrip',
+        feature: '/ezbiztrip-preview.png',
+        images: [
+          '/ezbiztrip-0.png',
+          '/ezbiztrip-1.png',
+          '/ezbiztrip-2.png',
+          '/ezbiztrip-3.png',
+          '/ezbiztrip-4.png',
+          '/ezbiztrip-5.png',
+          '/ezbiztrip-6.png',
+          '/ezbiztrip-7.png',
+          '/ezbiztrip-8.png',
+        ]
+      },
       {
         name: 'Findme',
         feature: '/findme-0.png',
@@ -285,37 +306,76 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `src`,
-        path: `${__dirname}/src/`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
-    `gatsby-plugin-glamor`,
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/cv`,
+        name: `cv`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+          {
+            resolve: `gatsby-remark-responsive-iframe`,
+            options: {
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
+      },
+    },
+    `gatsby-plugin-feed`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Blog - Thanh Nguyen Dac`,
+        short_name: `NDTB`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `content/assets/profile-pic.jpg`,
+      },
+    },
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    {
-      resolve: `gatsby-plugin-favicon`,
-      options: {
-        logo: "./src/favicon.jpg",
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false
-        }
-      }
-    },
-    'gatsby-plugin-sass',
-    'gatsby-plugin-react-helmet',
+    `gatsby-plugin-glamor`,
+    `gatsby-plugin-sass`
   ],
-};
+}

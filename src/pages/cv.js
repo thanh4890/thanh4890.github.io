@@ -41,6 +41,8 @@ const Year = g.span({
   fontSize: 17,
   fontWeight: 'normal',
   marginRight: 10,
+  width: 130,
+  textAlign: 'center',
   [mediaQueries.phone]: {
     textAlign: 'center'
   }
@@ -145,6 +147,7 @@ export default ({ data }) => (
       </div>
 
       <div className="col-md-8">
+        <g.H2>Some projects that I love the most</g.H2>
         <div className="row">
           {data.site.siteMetadata.portfolio.map((portfolio, key) =>
             <div key={key} className="col-lg-4 col-md-6 col-sm-6" css={{

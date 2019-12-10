@@ -32,12 +32,16 @@ const ListItem = g.li({
   textAlign: 'center'
 })
 
-const SocialItem = g.a({
+const NoBoxShadowLink = g.a({
+  boxShadow: 'none'
+})
+
+const SocialItem = g(NoBoxShadowLink)({
   padding: 5,
   fontSize: 20
 })
 
-const SidebarLink = g.a({
+const SidebarLink = g(NoBoxShadowLink)({
   display: 'block',
   textTransform: 'uppercase',
   color: "white",

@@ -23,6 +23,21 @@ module.exports = {
     ],
     portfolio: [
       {
+        name: 'EzBizTrip',
+        feature: '/ezbiztrip-preview.png',
+        images: [
+          '/ezbiztrip-0.png',
+          '/ezbiztrip-1.png',
+          '/ezbiztrip-2.png',
+          '/ezbiztrip-3.png',
+          '/ezbiztrip-4.png',
+          '/ezbiztrip-5.png',
+          '/ezbiztrip-6.png',
+          '/ezbiztrip-7.png',
+          '/ezbiztrip-8.png',
+        ]
+      },
+      {
         name: 'Findme',
         feature: '/findme-0.png',
         images: [

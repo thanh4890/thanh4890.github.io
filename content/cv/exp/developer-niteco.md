@@ -2,7 +2,7 @@
 title: Frontend Developer at Niteco
 date: "2018-11-15"
 start: '2018'
-end: 'Now'
+end: '2019'
 skills: 'React, Node.js, JavaScript'
 ---
 

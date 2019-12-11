@@ -14,7 +14,7 @@ What a night for Vietnamese people, there is a great festival atmosphere everywh
 
 ![Fans support the men's U22 Vietnamese football team at the SEA Games in Hà Nội. VNA/VNS  Photo Thanh Tùng](./vietnam-fans.jpg)
 
-![Young buffalos burn Chrismas tree at Vincom Pham Ngoc Thach. (Photo by Facebook Dota2vn, VOZVN)](./tre-trau-dot-cay-thong-vincom.jpg)
+![Young buffalos burn Christmas tree at Vincom Pham Ngoc Thach. (Photo by Facebook Dota2vn, VOZVN)](./tre-trau-dot-cay-thong-vincom.jpg)
 
 6 hours later, Chelsea faced Lille in a must-win match. Fortunately, everything is fine with 2 - 1 as final result.
 

@@ -1,6 +1,6 @@
 ---
 title: What a night for Vietnam and Chelsea supporters
-date: "2019-12-11T11:53:19Z"
+date: "2019-12-10T14:00:00Z"
 description: "Historic win for Việt Nam in SEA Games football and Chelsea go through Champions League group stage to knockout phase."
 ---
 
@@ -16,7 +16,7 @@ What a night for Vietnamese people, there is a great festival atmosphere everywh
 
 ![Young buffalos burn Christmas tree at Vincom Pham Ngoc Thach. (Photo by Facebook Dota2vn, VOZVN)](./tre-trau-dot-cay-thong-vincom.jpg)
 
-6 hours later, Chelsea faced Lille in a must-win match. Fortunately, everything is fine with 2 - 1 as final result.
+6 hours later, Chelsea face Lille in a must-win match. Fortunately, everything is fine with 2 - 1 as final result.
 
 ![Chelsea's Spanish defender Cesar Azpilicueta (R) celebrates with teammates after scoring their second goal during the UEFA Champion's League Group H football match between Chelsea and Lille at Stamford Bridge in London on December 10, 2019. (Photo by Glyn KIRK / AFP)](./chelsea.jpg)
 

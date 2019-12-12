@@ -10,13 +10,11 @@ The U22 team made history by thrashing Indonesia 3-0 in the final at the Rizal M
 
 ![Đoàn Văn Hậu celebrates one of his two goals. VNA/VNS Photo Hoàng Linh](./doan-van-hau.jpg)
 
-What a night for Vietnamese people, there is a great festival atmosphere everywhere in Vietnam.
-
-![Fans support the men's U22 Vietnamese football team at the SEA Games in Hà Nội. VNA/VNS  Photo Thanh Tùng](./vietnam-fans.jpg)
+![What a night for Vietnamese people, there was a great festival atmosphere everywhere in Vietnam.](./vietnam-fans.jpg)
 
 ![Young buffalos burn Christmas tree at Vincom Pham Ngoc Thach. (Photo by Facebook Dota2vn, VOZVN)](./tre-trau-dot-cay-thong-vincom.jpg)
 
-6 hours later, Chelsea face Lille in a must-win match. Fortunately, everything is fine with 2 - 1 as final result.
+6 hours later, Chelsea faced Lille in a must-win match. Fortunately, everything was fine with 2 - 1 as final result.
 
 ![Chelsea's Spanish defender Cesar Azpilicueta (R) celebrates with teammates after scoring their second goal during the UEFA Champion's League Group H football match between Chelsea and Lille at Stamford Bridge in London on December 10, 2019. (Photo by Glyn KIRK / AFP)](./chelsea.jpg)
 

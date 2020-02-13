@@ -3,7 +3,7 @@ title: WordPress Developer at Kopatheme
 date: "2017-12-24"
 start: '2013'
 end: '2015'
-skills: 'HTML, CSS, JavaScript, jQuery, PHP, WordPress'
+skills: 'HTML, CSS, JavaScript, jQuery, PHP, WordPress, Drupal, SVN, git'
 ---
 
 Kopatheme was established in 2010 – an experienced web design company in crafting highly functional, customizable WordPress themes, plugins and HTML Templates.

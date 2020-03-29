@@ -8,6 +8,7 @@ Front-end leaders help you to stay on top of relevant news and trends. They are 
 
 Twitter can be a great place to find people who are in-the-know.
 
+* Addy Osmani [@addyosmani](https://twitter.com/addyosmani) - JavaScript
 * [Kent C. Dodds](https://kentcdodds.com/) [@kentcdodds](https://twitter.com/kentcdodds) - JavaScript, React.js, testing-library/@react
 * [Dan Abramov](https://overreacted.io) [@dan_abramov](https://twitter.com/dan_abramov) - JavaScript, React.js
 * [Paul Irish](https://www.paulirish.com) [@paul_irish](https://twitter.com/paul_irish) - JavaScript

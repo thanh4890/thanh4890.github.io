@@ -31,4 +31,4 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-        echo $TEST_SECRET
+        echo TEST_SECRET = $TEST_SECRET

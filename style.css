@@ -40,6 +40,11 @@ body{
   hyphens: auto;
 }
 
+a {
+  color: #444;
+  text-decoration: none;
+}
+
 h1, h2, h3{
   margin: 0;
   color: #000;
@@ -69,13 +74,12 @@ li{
 /* main */
 
 /** big title **/
-#title, h1, h2{
+h1, h2{
   text-transform: uppercase;
 }
 
 #title{
-  position: relative;
-  left: 0.55in;
+  padding-left: 0.55in;
   margin-bottom: 0.3in;
   line-height: 1.2;
 }

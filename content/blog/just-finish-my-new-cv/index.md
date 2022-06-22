@@ -8,9 +8,9 @@ Oh hi,
 
 Long time don't write anything. I'm too lazy! Haha.
 
-Just finished my new CV, that bases on [mnjul/html-resume](https://github.com/mnjul/html-resume)
+Just finished my new CV, that based on [mnjul/html-resume](https://github.com/mnjul/html-resume)
 
-Simple and beautiful template. I found it when google some cv templates, can't find the article mention it again. But anyway, thanks the author of the article that introduces it and mnjul for making this.
+Simple and beautiful template. I found it when google some cv templates, can't find the article mention it again. But anyway, thanks the author of the article that introduces it and mnjul for making it.
 
 You can view it at: [CV](https://thanhdac.com/resume/cv.pdf)
 

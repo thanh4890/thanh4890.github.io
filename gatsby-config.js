@@ -2,8 +2,8 @@ module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
     siteUrl: `https://thanh4890.netlify.com`,
-    title: `Thanh Dark`,
-    author: `Thanh Dark`,
+    title: `Thanh Dac`,
+    author: `Thanh Dac`,
     description: `Thanh Nguyen Dac personal site`,
     social: {
       twitter: 'thanh4890'

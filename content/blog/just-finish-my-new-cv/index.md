@@ -12,7 +12,7 @@ Just finished my new CV, that based on [mnjul/html-resume](https://github.com/mn
 
 Simple and beautiful template. I found it when google some cv templates, can't find the article mention it again. But anyway, thanks the author of the article that introduces it and mnjul for making it.
 
-You can view it at: [CV](https://thanhdac.com/resume/cv.pdf)
+You can view it at: [CV](https://thanhdac.com/cv.pdf)
 
 Bye again. See you.
 

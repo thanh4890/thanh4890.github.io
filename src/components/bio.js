@@ -59,7 +59,7 @@ const Bio = () => {
         {' '}
         <a href={`https://twitter.com/${social.twitter}`}>
           Follow me on Twitter
-        </a>. <a href="/resume/cv.pdf">View my CV</a>
+        </a>. <a href="/cv.pdf">View my CV</a>
       </p>
     </div>
   )

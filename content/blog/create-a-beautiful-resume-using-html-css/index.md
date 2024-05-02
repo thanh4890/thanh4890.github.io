@@ -1,5 +1,5 @@
 ---
-title: Build beautiful resume by HTML/CSS
+title: Create a beautiful resume using HTML/CSS
 date: "2022-06-22T02:25:43Z"
 description: "Beautiful resume template. Purely create with HTML/CSS."
 ---

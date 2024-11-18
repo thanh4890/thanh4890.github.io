@@ -377,7 +377,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-glamor`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-glamor`
   ],
 }

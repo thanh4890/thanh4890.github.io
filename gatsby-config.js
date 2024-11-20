@@ -122,5 +122,6 @@ module.exports = {
         icon: `src/images/profile-pic.jpg`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-remove-serviceworker',
   ],
 }
